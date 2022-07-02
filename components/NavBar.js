@@ -15,13 +15,13 @@ export const NavBar = () => {
   }
   return (
     <div className="flex justify-around py-5 items-center flex-row">
-      <div className="flex flex-col border dark:text-black text-white">
+      <div className="flex flex-col border dark:text-white">
         <div className="text-2xl font-bold">Vaisakh NP</div>
         <div className="text-xl font-semibold mx-auto">
           Full-Stack Developer
         </div>
       </div>
-      <div className="flex flex-row items-center dark:text-black text-white text-xl border">
+      <div className="flex flex-row items-center dark:text-white text-xl border">
         <div className="text-center mx-4">Experience</div>
         <div className="text-center mx-4">Projects</div>
         <div className="text-center mx-4">About</div>
