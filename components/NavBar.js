@@ -15,19 +15,19 @@ export const NavBar = () => {
   }
   return (
     <div className="flex justify-around py-5 items-center flex-row">
-      <div className="flex flex-col border dark:text-white">
+      <div className="flex flex-col dark:text-white">
         <div className="text-2xl font-bold">Vaisakh NP</div>
         <div className="text-xl font-semibold mx-auto">
           Full-Stack Developer
         </div>
       </div>
-      <div className="flex flex-row items-center dark:text-white text-xl border">
+      <div className="flex flex-row items-center dark:text-white text-xl">
         <div className="text-center mx-4">Experience</div>
         <div className="text-center mx-4">Projects</div>
         <div className="text-center mx-4">About</div>
         <div className="text-center mx-4">Contact</div>
       </div>
-      <div className="flex items-center justify-center border">
+      <div className="flex items-center justify-center">
         <label htmlFor="toggleB" className="flex items-center cursor-pointer">
           <div className="relative">
             <input
@@ -38,14 +38,14 @@ export const NavBar = () => {
               defaultChecked={darkTheme}
             />
             <div
-              className={`block bg-gray-300 w-14 h-8 rounded-full  ${
-                darkTheme == true && " bg-green-400"
-              }`}
+              className={
+                "block bg-gray-500 w-14 h-8 rounded-full dark:bg-blue-600"
+              }
             ></div>
             <div
-              className={`absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition ${
-                darkTheme == true && "translate-x-full bg-yellow-400"
-              }`}
+              className={
+                "absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition dark:translate-x-full"
+              }
             ></div>
           </div>
         </label>
