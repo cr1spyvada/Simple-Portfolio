@@ -14,17 +14,15 @@ export const NavBar = () => {
     console.log({ darkTheme });
   }
   return (
-    <div className="flex justify-around py-5 items-center flex-row">
+    <div className="flex justify-between py-5 items-center flex-row">
       <div className="flex flex-col dark:text-white">
-        <div className="text-2xl font-bold">Vaisakh NP</div>
-        <div className="text-xl font-semibold mx-auto">
-          Full-Stack Developer
-        </div>
+        <div className="text-2xl font-medium">Vaisakh NP</div>
+        <div className="text-xl font-light mx-auto">Full-Stack Developer</div>
       </div>
-      <div className="flex flex-row items-center dark:text-white text-xl">
+      <div className="flex flex-row items-center font-light dark:text-white text-xl">
+        <div className="text-center mx-4">About</div>
         <div className="text-center mx-4">Experience</div>
         <div className="text-center mx-4">Projects</div>
-        <div className="text-center mx-4">About</div>
         <div className="text-center mx-4">Contact</div>
       </div>
       <div className="flex items-center justify-center">
@@ -39,7 +37,7 @@ export const NavBar = () => {
             />
             <div
               className={
-                "block bg-gray-500 w-14 h-8 rounded-full dark:bg-blue-600"
+                "block bg-gray-500 w-14 h-8 rounded-full dark:bg-green-600"
               }
             ></div>
             <div
