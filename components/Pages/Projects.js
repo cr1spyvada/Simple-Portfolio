@@ -1,10 +1,10 @@
 import React from 'react';
+import { PageContainer } from '../PageContainer';
 
 export const Projects = () => {
   return (
-    <div className="my-10 border flex flex-col gap-2 lg:flex-row justify-between items-center h-screen dark:text-white">
-      <div className="px-2 text-6xl border">PROJECTS</div>
-      <div className="w-full md:w-5/7 h-full border grid p-4 gap-4 md:grid-rows-3 md:grid-cols-3">
+    <PageContainer title="PROJECTS">
+      <div className="w-full h-full md:w-5/7 border grid p-4 gap-4 md:grid-rows-3 md:grid-cols-3">
         <div className="border md:row-span-1 md:col-span-2 rounded-lg overflow-hidden">
           <img
             src="/img1.jpg"
@@ -36,6 +36,6 @@ export const Projects = () => {
           />
         </div>
       </div>
-    </div>
+    </PageContainer>
   );
 };

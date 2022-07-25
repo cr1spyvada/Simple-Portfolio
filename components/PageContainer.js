@@ -1,15 +1,16 @@
 import React from "react";
-import { Footer } from "./Footer";
-import { NavBar } from "./NavBar";
+import { Footer } from './Footer';
 
-export const PageContainer = ({ children }) => {
+export const PageContainer = ({ children, title }) => {
+  // const { title } = props;
   return (
-    <div className="bg-sky-200 sm:text-sm dark:bg-slate-900 px-20">
-      {/* <div className="sticky top-0 bg-sky-200 sm:text-sm dark:bg-slate-900 px-20"> */}
-      <NavBar />
-      {/* </div> */}
-      <div>{children}</div>
-      <Footer />
+    <div className="h-screen border dark:text-white my-10">
+      {title && (
+        <div className="h-min md:text-right text-center w-full text-6xl border">
+          {title?.toUpperCase()}
+        </div>
+      )}
+      <div className="h-5/6 w-full">{children}</div>
     </div>
   );
 };

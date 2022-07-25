@@ -10,5 +10,24 @@ export const metadata = {
       Frameworks: 'React, React-Native, NodeJS,ExpressJS, Selenium,Numpy,Pandas',
       Tools: ' GIT, Google Cloud, Firebase, MySQL, Expo-CLI, Vercel, Jupyter, MongoDB'
     }
-  }
+  },
+  Experience: [
+    { Org: 'Trisetra', Role: 'Frontend Developer', Duration: ["July' 22", 'Present'] },
+    { Org: 'EvolvFit', Role: 'Software Developer', Duration: ["April' 22", "June' 22"] },
+    {
+      Org: 'Aero Telcom Pvt Ltd',
+      Role: 'Application Developer',
+      Duration: ["October' 21", "January' 22"]
+    },
+    {
+      Org: 'Indian Institute of Information Technology Kottayam',
+      Role: 'Graduation',
+      Duration: ["August' 19", "April' 23"]
+    }
+    // {
+    //   Org: 'Delhi Public School, R.K Puram',
+    //   Role: 'High School',
+    //   Duration: ["May' 07", "April' 19"]
+    // }
+  ]
 };

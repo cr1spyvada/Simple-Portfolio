@@ -1,11 +1,11 @@
 import React from 'react';
 import { metadata } from '../../data/content';
+import { PageContainer } from '../PageContainer';
 
 export const About = () => {
   return (
-    <div className="border my-10 flex flex-col lg:flex-row justify-between items-center lg:h-screen dark:text-white">
-      <div className=" my-auto text-center lg:w-1/5 text-6xl border">ABOUT</div>
-      <div className="lg:w-4/5 border ml-4 text-left h-full flex flex-col justify-around font-light text-lg">
+    <PageContainer title="about">
+      <div className="w-full border text-left h-full flex flex-col justify-around font-light text-lg">
         <div className="items-end flex flex-col">
           <div className="font-normal w-full text-left text-xl py-2 text-gray-900 dark:text-sky-200">
             Me,Myself & I
@@ -32,6 +32,6 @@ export const About = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </PageContainer>
   );
 };
