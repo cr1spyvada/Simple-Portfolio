@@ -8,7 +8,7 @@ import Tailwind from "../public/tailwind.svg";
 export const Footer = () => {
   const IconClassName = "fill-black h-8 mx-4 my-2 rounded-lg dark:fill-white";
   return (
-    <div className="py-5 flex justify-between border items-center text-xl dark:text-white text-black">
+    <div className="py-5 flex justify-between items-center text-xl dark:text-white text-black">
       <div className="flex justify-around">
         <a href="mailto:vaisakh2019@iiitkottayam.ac.in">
           <Mail className={IconClassName} />

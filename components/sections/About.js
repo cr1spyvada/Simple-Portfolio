@@ -5,7 +5,7 @@ import { PageContainer } from '../PageContainer';
 export const About = () => {
   return (
     <PageContainer title="about">
-      <div className="w-full border text-left h-full flex flex-col justify-around font-light text-lg">
+      <div className="w-full text-left h-full flex flex-col justify-around font-light text-lg">
         <div className="items-end flex flex-col">
           <div className="font-normal w-full text-left text-xl py-2 text-gray-900 dark:text-sky-200">
             Me,Myself & I
@@ -18,7 +18,7 @@ export const About = () => {
             ))}
           </ul>
         </div>
-        <div className="border">
+        <div className="">
           <div className="font-normal w-full text-left text-xl py-2 text-gray-900 dark:text-sky-200">
             Skills
           </div>

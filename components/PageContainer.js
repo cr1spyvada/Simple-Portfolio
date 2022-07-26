@@ -4,9 +4,9 @@ import { Footer } from './Footer';
 export const PageContainer = ({ children, title }) => {
   // const { title } = props;
   return (
-    <div className="h-screen border dark:text-white my-10">
+    <div className="h-screen dark:text-white my-10">
       {title && (
-        <div className="h-min md:text-right text-center w-full text-6xl border">
+        <div className="h-min md:text-right text-center w-full text-6xl">
           {title?.toUpperCase()}
         </div>
       )}

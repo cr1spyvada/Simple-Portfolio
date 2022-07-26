@@ -4,7 +4,7 @@ import { PageContainer } from '../PageContainer';
 export const Hero = () => {
   return (
     <PageContainer>
-      <div className="h-full w-full text-right my-50 border flex justify-center items-center">
+      <div className="h-full w-full text-right my-50 flex justify-center items-center">
         <div className="w-3/5 font-light">
           <div className="text-4xl mb-2">Hi there,</div>
           <div className="text-3xl font-thin my-6">

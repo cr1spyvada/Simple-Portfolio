@@ -9,7 +9,7 @@ const Experience = () => {
         <div className="absolute h-full border border-slate-600 dark:border-white left-1/2" />
         <div className="h-full flex flex-col justify-between gap-y-0 text-lg">
           {metadata.Experience.map((value, idx) => (
-            <div className="w-full relative flex align-center justify-center gap-x-6">
+            <div key={idx} className="w-full relative flex align-center justify-center gap-x-6">
               <div
                 className={`${
                   idx % 2 == 0 ? 'text-right order-1' : 'order-3'
@@ -28,9 +28,7 @@ const Experience = () => {
                     idx == 0
                       ? 'bg-lime-600 dark:bg-lime-500 animate-ping'
                       : 'bg-slate-600 dark:bg-white'
-                  } m${
-                    idx === 0 ? 'b' : idx === metadata.Experience.length - 1 ? 't' : 'y'
-                  }-auto z-10 rounded-3xl border-white p-3`}
+                  } my-auto z-10 rounded-3xl border-white p-3`}
                 />
               </div>
               <div
