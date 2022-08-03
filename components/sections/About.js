@@ -10,7 +10,7 @@ export const About = () => {
           <div className="font-normal w-full text-left text-xl py-2 text-gray-900 dark:text-sky-200">
             Me,Myself & I
           </div>
-          <ul className="lg:w-3/4">
+          <ul className="md:w-3/4">
             {metadata.About.Bio.map((item, idx) => (
               <li key={idx} className="list-none my-3">
                 {item}
@@ -18,11 +18,11 @@ export const About = () => {
             ))}
           </ul>
         </div>
-        <div className="">
+        <div className="flex flex-col items-end">
           <div className="font-normal w-full text-left text-xl py-2 text-gray-900 dark:text-sky-200">
             Skills
           </div>
-          <ul>
+          <ul className="ml-auto md:w-3/4">
             {Object.entries(metadata.About.Skills).map(([key, value], idx) => (
               <li className="list-none my-2 flex flex-col lg:flex-row lg:justify-between" key={idx}>
                 <a className="font-normal lg:w-1/4">{key}:</a>

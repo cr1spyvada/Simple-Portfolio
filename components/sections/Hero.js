@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { PageContainer } from '../PageContainer';
 
 export const Hero = () => {

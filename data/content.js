@@ -12,7 +12,7 @@ export const metadata = {
     }
   },
   Experience: [
-    { Org: 'Trisetra', Role: 'Frontend Developer', Duration: ["July' 22", 'Present'] },
+    { Org: 'Trisetra', Role: 'Frontend Developer', Duration: ["July' 22", "Aug' 22"] },
     { Org: 'EvolvFit', Role: 'Software Developer', Duration: ["April' 22", "June' 22"] },
     {
       Org: 'Aero Telcom Pvt Ltd',

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useTheme } from "next-themes";
+import React, { useState } from 'react';
+import { useTheme } from 'next-themes';
 import { Switch } from '@headlessui/react';
 
 export const NavBar = () => {
@@ -15,12 +15,13 @@ export const NavBar = () => {
   }
   const tabArray = ['About', 'Experience', 'Projects', 'Contact'];
   return (
-    <div className="flex justify-between py-5 items-center flex-col md:flex-row">
+    // TODO: add content to meta
+    <div className="flex px-20 justify-between py-5 items-center flex-col md:flex-row">
       <div className="flex flex-col dark:text-white">
         <div className="text-2xl font-medium">Vaisakh NP</div>
         <div className="text-xl font-light mx-auto">Full-Stack Developer</div>
       </div>
-      <div className="flex flex-col sm:flex-row items-center my-4 font-light dark:text-white text-xl">
+      <div className="grid grid-cols-2 md:grid-cols-4 items-center my-4 font-light dark:text-white text-xl">
         {tabArray.map((value, idx) => (
           <div
             key={idx}
