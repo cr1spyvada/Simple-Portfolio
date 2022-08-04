@@ -12,15 +12,16 @@ export const metadata = {
     }
   },
   Experience: [
-    { Org: 'Trisetra', Role: 'Frontend Developer', Duration: ["July' 22", "Aug' 22"] },
-    { Org: 'EvolvFit', Role: 'Software Developer', Duration: ["April' 22", "June' 22"] },
+    { Org: 'Trisetra', Role: 'Frontend Developer Intern', Duration: ["July' 22", "Aug' 22"] },
+    { Org: 'EvolvFit', Role: 'Software Developer Intern', Duration: ["April' 22", "June' 22"] },
     {
       Org: 'Aero Telcom Pvt Ltd',
-      Role: 'Application Developer',
+      Role: 'Application Developer Intern',
       Duration: ["October' 21", "January' 22"]
     },
     {
-      Org: 'Indian Institute of Information Technology Kottayam',
+      // Org: 'Indian Institute of Information Technology Kottayam',
+      Org: 'IIIT Kottayam',
       Role: 'Graduation',
       Duration: ["August' 19", "April' 23"]
     }

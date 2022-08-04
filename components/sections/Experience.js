@@ -5,41 +5,22 @@ import { PageContainer } from '../PageContainer';
 const Experience = () => {
   return (
     <PageContainer title="experience">
-      <div className="h-full relative m-4">
-        <div className="absolute h-full border bg-slate-600  dark:bg-white left-1/2" />
-        <div className="h-full flex flex-col justify-between gap-y-0 text-lg">
+      <div className="h-full relative my-8">
+        <div className="relative container mx-auto px-6 flex flex-col justify-center gap-y-8">
+          <div className="absolute z-0 w-2 rounded-xl h-full bg-white shadow-md inset-0 left-17 md:mx-auto md:right-0 md:left-0"></div>
           {metadata.Experience.map((value, idx) => (
-            <div
-              key={idx}
-              className="w-full text-xs md:text-base relative flex align-center justify-center gap-x-6">
-              <div
-                className={`${
-                  idx % 2 == 0 ? 'text-right order-1' : 'order-3'
-                } w-2/5 bg-slate-800 text-white dark:bg-white dark:text-black p-3 rounded-lg`}>
-                <div className="font-semibold text-base md:text-2xl">{value.Org}</div>
-                <div className="font-medium">{value.Role}</div>
-              </div>
-              <div
-                className={`${
-                  idx == 0 ? 'bg-lime-600 dark:bg-lime-500' : 'bg-slate-600 dark:bg-white'
-                } m${
-                  idx === 0 ? 'b' : idx === metadata.Experience.length - 1 ? 't' : 'y'
-                }-auto z-10 order-2 rounded-3xl border-white`}>
+            <div key={idx} className="relative z-10 text-white dark:text-black">
+              <div className={idx % 2 == 0 ? 'timeline-container' : 'timeline-container-left'}>
                 <div
-                  className={`${
-                    idx == 0
-                      ? 'bg-lime-600 dark:bg-lime-500 animate-ping'
-                      : 'bg-slate-600 dark:bg-white'
-                  } m${
-                    idx === 0 ? 'b' : idx === metadata.Experience.length - 1 ? 't' : 'y'
-                  }-auto z-10 rounded-3xl border-white p-3`}
-                />
-              </div>
-              <div
-                className={`${
-                  idx % 2 == 0 ? 'order-3' : 'order-1 text-right'
-                } w-2/5 text-gray-800 dark:text-gray-400 my-auto p-2 align-middle`}>
-                {value.Duration[0]} - {value.Duration[1]}
+                  className={idx % 2 == 0 ? 'timeline-pointer' : 'timeline-pointer-left'}
+                  aria-hidden="true"></div>
+                <div className="bg-slate-800 dark:bg-white p-6 rounded-md shadow-md">
+                  <span className="font-bold text-indigo-600 text-sm tracking-wide">
+                    {value.Duration[0]} - {value.Duration[1]}
+                  </span>
+                  <div className="text-xl md:text-2xl font-bold pt-1">{value.Org}</div>
+                  <div className="pt-1">{value.Role}</div>
+                </div>
               </div>
             </div>
           ))}
