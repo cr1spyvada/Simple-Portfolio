@@ -24,8 +24,8 @@ export const Hero = () => {
             I'm <a className="font-bold">Vaisakh</a>,
             <div className="hero-target-container w-fit font-semibold mx-2">
               <div className="hero-target">
-                <div className="hero-card-a w-fit whitespace-nowrap">Software Developer</div>
-                <div className="hero-card-b w-fit whitespace-nowrap">Problem Solver</div>
+                <div className="hero-card-a w-fit">Software Developer</div>
+                <div className="hero-card-b w-fit">Problem Solver</div>
               </div>
             </div>
             <div>and above all curious about how things work.</div>
