@@ -19,3 +19,25 @@
     @apply absolute inset-0 left-10 h-4 w-4 transform rotate-45  xs:top-11 xs:left-14 md:left-auto md:right-1 bg-slate-800 dark:bg-white;
   }
 }
+
+.hero-target-container {
+  display: inline-block;
+  perspective: 1400px;
+}
+
+.hero-target {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.hero-card-a,
+.hero-card-b {
+  backface-visibility: hidden;
+}
+
+.hero-card-b {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateX(180deg);
+}

@@ -11,7 +11,7 @@ import Experience from '../components/sections/Experience';
 
 export default function Home() {
   return (
-    <div className="bg-sky-200 text-xs sm:text-sm md:text-md lg:text-lg dark:bg-slate-900">
+    <div className="bg-[#a9e1ff] text-xs sm:text-sm md:text-md lg:text-lg dark:bg-slate-900">
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>

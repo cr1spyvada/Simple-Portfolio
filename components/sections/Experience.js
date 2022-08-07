@@ -6,8 +6,8 @@ const Experience = () => {
   return (
     <PageContainer title="experience">
       <div className="h-full relative my-8">
-        <div className="relative container mx-auto px-6 flex flex-col justify-center gap-y-8">
-          <div className="absolute z-0 w-2 rounded-xl h-full bg-white shadow-md inset-0 left-17 md:mx-auto md:right-0 md:left-0"></div>
+        <div className="relative container pt-4 mx-auto px-6 flex flex-col justify-center gap-y-8">
+          <div className="absolute z-0 w-2 rounded-xl h-full bg-slate-600 dark:bg-white shadow-md inset-0 left-17 md:mx-auto md:right-0 md:left-0"></div>
           {metadata.Experience.map((value, idx) => (
             <div key={idx} className="relative z-10 text-white dark:text-black">
               <div className={idx % 2 == 0 ? 'timeline-container' : 'timeline-container-left'}>
