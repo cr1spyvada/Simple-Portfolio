@@ -5,7 +5,8 @@ export const PageContainer = ({ children, title, color = 'white' }) => {
   return (
     <div
       id={title}
-      className={`min-h-screen md:h-screen flex flex-col justify-center px-10 md:px-20 dark:text-white ${
+      className={`
+      min-h-screen md:h-screen flex flex-col justify-center px-10 md:px-20 dark:text-white ${
         title ? 'py-20' : 'py-0'
       } ${color}`}>
       {title && (
