@@ -8,16 +8,16 @@ export const Hero = () => {
     animation.current = anime({
       targets: '.hero-target',
       direction: 'alternate',
-      rotateX: { value: '+=180', delay: 600 },
+      rotateX: { value: '+=180', delay: 700 },
       easing: 'easeInOutSine',
-      duration: 1200,
+      duration: 1400,
       autoplay: true,
       loop: true
     });
   }, []);
   return (
     <PageContainer>
-      <div className="h-full w-full text-right my-50 flex justify-center items-center">
+      <div className="h-full w-full text-right flex justify-center items-start">
         <div className="w-3/5 font-light">
           <div className="text-4xl mb-2">Hi there,</div>
           <div className="text-3xl font-thin my-6">
