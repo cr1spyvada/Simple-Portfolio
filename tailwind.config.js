@@ -15,6 +15,12 @@ module.exports = {
       inset: {
         17: '68px',
         26: '104px'
+      },
+      colors: {
+        martinique: '#303655',
+        loblolly: '#bfcbce',
+        nepal: '#84a7ba',
+        wildblueyonder: '#6f90af'
       }
     }
   },
