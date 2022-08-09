@@ -3,7 +3,7 @@ import { PageContainer } from '../PageContainer';
 
 export const Projects = () => {
   return (
-    <PageContainer title="PROJECTS">
+    <PageContainer title="Projects">
       <div className="w-full h-full md:w-5/7 grid p-4 gap-4 md:grid-rows-3 md:grid-cols-3">
         <div className="md:row-span-1 md:col-span-2 rounded-lg overflow-hidden">
           <img

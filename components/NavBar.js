@@ -4,6 +4,7 @@ import { Switch } from '@headlessui/react';
 
 export const NavBar = () => {
   const [darkTheme, setDarkTheme] = useState(false);
+  const [open, setOpen] = useState(false);
   function changeState() {
     if (darkTheme === false) {
       document.documentElement.classList.add('dark');
@@ -16,22 +17,36 @@ export const NavBar = () => {
   const tabArray = ['About', 'Experience', 'Projects', 'Contact'];
   return (
     // TODO: add content to meta
-    <div className="flex px-20 justify-between py-5 items-center flex-col md:flex-row">
-      <div className="flex flex-col dark:text-white">
-        <div className="text-2xl font-medium">Vaisakh NP</div>
-        <div className="text-xl font-light mx-auto">Full-Stack Developer</div>
+    <div className="relative rounded-xl flex px-20 z-[10000] bg-white justify-between shadow-md w-full top-0 left-0 py-5 items-center flex-col md:flex-row">
+      <div className="md:flex w-full items-center justify-between py-4 md:px-10 px-7">
+        <div
+          className="flex flex-col dark:text-white font-bold text-2xl items-center
+      text-gray-800">
+          <div className="text-2xl flex-nowrap font-medium">Vaisakh NP</div>
+          <div className="text-xl text-center font-light mx-auto">Full-Stack Developer</div>
+        </div>
+        <div
+          onClick={() => setOpen(!open)}
+          className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden">
+          {open ? 'x' : '='}
+        </div>
+        <ul
+          className={`md:flex shadow-md rounded-lg md:shadow-none md:justify-between gap-y-5 text-xl md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto left-0 w-full md:w-auto md:pl-0 transition-all duration-500 ease-in ${
+            open ? 'top-26 ' : 'top-[-30rem]'
+          }`}>
+          {tabArray.map((value, idx) => (
+            <li
+              key={idx}
+              className="items-center w-max mx-auto my-5 text-center transition group delay-250 duration-300 md:mx-4 rounded-md p-1">
+              <a href={'#' + value}>
+                {value}
+                <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 items-center my-4 font-light dark:text-white text-xl">
-        {tabArray.map((value, idx) => (
-          <div
-            key={idx}
-            className="text-center transition group delay-250 duration-300 mx-4 rounded-md p-1">
-            {value}
-            <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
-          </div>
-        ))}
-      </div>
-      <div className="flex items-center justify-center">
+      {/* <div className="flex items-center justify-center">
         <Switch
           checked={darkTheme}
           onChange={changeState}
@@ -44,7 +59,7 @@ export const NavBar = () => {
             }
           />
         </Switch>
-      </div>
+      </div> */}
     </div>
   );
 };

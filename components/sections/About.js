@@ -4,7 +4,7 @@ import { PageContainer } from '../PageContainer';
 
 export const About = () => {
   return (
-    <PageContainer title="about">
+    <PageContainer title="About">
       <div className="w-full text-left h-full flex flex-col justify-around font-light text-lg">
         <div className="items-end flex flex-col">
           <div className="font-normal w-full text-left text-xl py-2 text-gray-900 dark:text-sky-200">
