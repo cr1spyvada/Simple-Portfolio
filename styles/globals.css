@@ -20,6 +20,11 @@
   }
 }
 
+*,
+html {
+  scroll-behavior: smooth !important;
+}
+
 .hero-target-container {
   display: inline-block;
   perspective: 1400px;

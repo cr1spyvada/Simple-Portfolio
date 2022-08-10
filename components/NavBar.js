@@ -1,23 +1,15 @@
 import React, { useState } from 'react';
 import { useTheme } from 'next-themes';
 import { Switch } from '@headlessui/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEllipsisVertical, faX } from '@fortawesome/free-solid-svg-icons';
 
 export const NavBar = () => {
-  const [darkTheme, setDarkTheme] = useState(false);
   const [open, setOpen] = useState(false);
-  function changeState() {
-    if (darkTheme === false) {
-      document.documentElement.classList.add('dark');
-      setDarkTheme(true);
-    } else {
-      document.documentElement.classList.remove('dark');
-      setDarkTheme(false);
-    }
-  }
   const tabArray = ['About', 'Experience', 'Projects', 'Contact'];
   return (
     // TODO: add content to meta
-    <div className="relative rounded-xl flex px-20 z-[10000] bg-white justify-between shadow-md w-full top-0 left-0 py-5 items-center flex-col md:flex-row">
+    <div className="relative rounded-xl flex px-20 z-[10000] dark:bg-slate-900 bg-white justify-between dark:drop-shadow-white drop-shadow-md w-full top-0 left-0 py-5 items-center flex-col md:flex-row">
       <div className="md:flex w-full items-center justify-between py-4 md:px-10 px-7">
         <div
           className="flex flex-col dark:text-white font-bold text-2xl items-center
@@ -27,11 +19,23 @@ export const NavBar = () => {
         </div>
         <div
           onClick={() => setOpen(!open)}
-          className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden">
-          {open ? 'x' : '='}
+          className="text-3xl dark:text-white absolute right-8 top-6 cursor-pointer md:hidden">
+          {open ? (
+            <FontAwesomeIcon
+              icon={faX}
+              className="dark:text-white text-black"
+              style={{ fontSize: '1.2rem' }}
+            />
+          ) : (
+            <FontAwesomeIcon
+              icon={faEllipsisVertical}
+              className="dark:text-white text-black"
+              style={{ fontSize: '1.5rem' }}
+            />
+          )}
         </div>
         <ul
-          className={`md:flex shadow-md rounded-lg md:shadow-none md:justify-between gap-y-5 text-xl md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto left-0 w-full md:w-auto md:pl-0 transition-all duration-500 ease-in ${
+          className={`md:flex shadow-md rounded-lg md:shadow-none md:justify-between gap-y-5 text-xl md:items-center md:pb-0 pb-12 absolute md:static dark:text-white dark:bg-slate-900 bg-white md:z-auto left-0 w-full md:w-auto md:pl-0 transition-all duration-500 ease-in ${
             open ? 'top-26 ' : 'top-[-30rem]'
           }`}>
           {tabArray.map((value, idx) => (
@@ -46,20 +50,6 @@ export const NavBar = () => {
           ))}
         </ul>
       </div>
-      {/* <div className="flex items-center justify-center">
-        <Switch
-          checked={darkTheme}
-          onChange={changeState}
-          className={
-            'dark:bg-green-600 bg-gray-200 relative inline-flex h-8 w-14 items-center rounded-full'
-          }>
-          <span
-            className={
-              'transform transition ease-in-out duration-200 dark:translate-x-6 translate-x-1 inline-block h-7 w-7 rounded-full bg-white'
-            }
-          />
-        </Switch>
-      </div> */}
     </div>
   );
 };
