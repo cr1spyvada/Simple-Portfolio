@@ -36,20 +36,6 @@ export const NavBar = () => {
           ))}
         </ul>
       </div>
-      {/* <div className="flex items-center justify-center">
-        <Switch
-          checked={darkTheme}
-          onChange={changeState}
-          className={
-            'dark:bg-green-600 bg-gray-200 relative inline-flex h-8 w-14 items-center rounded-full'
-          }>
-          <span
-            className={
-              'transform transition ease-in-out duration-200 dark:translate-x-6 translate-x-1 inline-block h-7 w-7 rounded-full bg-white'
-            }
-          />
-        </Switch>
-      </div> */}
     </div>
   );
 };

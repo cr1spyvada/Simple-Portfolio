@@ -6,9 +6,9 @@ export const PageContainer = ({ children, title, color = 'white' }) => {
     <div
       id={title}
       className={`
-      min-h-screen md:h-screen flex flex-col justify-center px-10 md:px-20 dark:text-white ${
-        title ? 'py-20' : 'py-0'
-      } ${color}`}>
+       min-h-screen md:h-screen flex flex-col justify-center px-10 md:px-20 dark:text-white ${
+         title ? 'py-20' : 'py-0'
+       } ${color}`}>
       {title && (
         <div className="h-min md:text-right text-center w-full md:text-6xl text-3xl">
           {title?.toUpperCase()}

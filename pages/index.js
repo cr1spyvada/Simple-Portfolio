@@ -7,7 +7,7 @@ import { NavBar } from '../components/NavBar';
 import { Footer } from '../components/Footer';
 import Experience from '../components/sections/Experience';
 import ToggleButton from '../components/buttons/ToggleButton';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { faArrowUp, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
@@ -30,7 +30,10 @@ export default function Home() {
     });
   };
 
-  window.addEventListener('scroll', toggleVisible);
+  useEffect(() => {
+    // typeof window !== 'undefined' &&
+    window.addEventListener('scroll', toggleVisible);
+  });
 
   function changeState() {
     if (darkTheme === false) {
@@ -43,20 +46,20 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-white text-xs sm:text-sm md:text-md lg:text-lg dark:bg-slate-900">
+    <div className="bg-white text-xs sm:text-sm md:text-md lg:text-lg transition-colors duration-500 dark:bg-slate-900">
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
       <NavBar />
-      <div className="mt-10">
+      <div className="relative mt-10">
         <Hero />
         <About />
         <Experience />
         <Projects />
-      </div>
-      <div className="fixed flex flex-col gap-y-2 bottom-0 right-0 p-2 m-8">
-        {visible && <ToggleButton onClick={scrollToTop} icon={faArrowUp} />}
-        <ToggleButton onClick={changeState} icon={!darkTheme ? faMoon : faSun} />
+        <div className="fixed items-end flex flex-col gap-y-2 bottom-5 right-0 p-2 md:mr-3">
+          {visible && <ToggleButton onClick={scrollToTop} icon={faArrowUp} />}
+          <ToggleButton onClick={changeState} icon={!darkTheme ? faMoon : faSun} />
+        </div>
       </div>
       <Footer />
     </div>
