@@ -36,7 +36,7 @@ export const NavBar = () => {
         </div>
         <ul
           className={`md:flex shadow-md rounded-lg md:shadow-none md:justify-between gap-y-5 text-xl md:items-center md:pb-0 pb-12 absolute md:static dark:text-white dark:bg-slate-900 bg-white md:z-auto left-0 w-full md:w-auto md:pl-0 transition-all duration-500 ease-in ${
-            open ? 'top-26 ' : 'top-[-30rem]'
+            open ? 'top-[10rem] ' : 'top-[-30rem]'
           }`}>
           {tabArray.map((value, idx) => (
             <li
