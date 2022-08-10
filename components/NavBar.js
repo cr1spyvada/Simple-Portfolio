@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useTheme } from 'next-themes';
 import { Switch } from '@headlessui/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEllipsisVertical, faX } from '@fortawesome/free-solid-svg-icons';
 
 export const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -17,8 +19,20 @@ export const NavBar = () => {
         </div>
         <div
           onClick={() => setOpen(!open)}
-          className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden">
-          {open ? 'x' : '='}
+          className="text-3xl dark:text-white absolute right-8 top-6 cursor-pointer md:hidden">
+          {open ? (
+            <FontAwesomeIcon
+              icon={faX}
+              className="dark:text-white text-black"
+              style={{ fontSize: '1.2rem' }}
+            />
+          ) : (
+            <FontAwesomeIcon
+              icon={faEllipsisVertical}
+              className="dark:text-white text-black"
+              style={{ fontSize: '1.5rem' }}
+            />
+          )}
         </div>
         <ul
           className={`md:flex shadow-md rounded-lg md:shadow-none md:justify-between gap-y-5 text-xl md:items-center md:pb-0 pb-12 absolute md:static dark:text-white dark:bg-slate-900 bg-white md:z-auto left-0 w-full md:w-auto md:pl-0 transition-all duration-500 ease-in ${
