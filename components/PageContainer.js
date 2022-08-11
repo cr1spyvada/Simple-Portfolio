@@ -1,5 +1,4 @@
 import React from 'react';
-import { Footer } from './Footer';
 
 export const PageContainer = ({ children, title, color = 'white' }) => {
   return (
@@ -14,7 +13,7 @@ export const PageContainer = ({ children, title, color = 'white' }) => {
           {title?.toUpperCase()}
         </div>
       )}
-      <div className="my-auto h-5/6 w-full">{children}</div>
+      <div className="mb-auto md:my-auto h-5/6 w-full">{children}</div>
     </div>
   );
 };
