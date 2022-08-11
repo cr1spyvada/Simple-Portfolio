@@ -3,12 +3,12 @@ import React from 'react';
 
 const ToggleButton = ({ icon, onClick }) => {
   return (
-    <button className="rounded-full bg-slate-800 dark:bg-blue-100 h-12 w-12">
+    <button
+      onClick={onClick}
+      className="rounded-full bg-slate-800 dark:bg-blue-100 h-8 w-8 md:h-12 md:w-12">
       <FontAwesomeIcon
-        onClick={onClick}
         icon={icon}
-        className="dark:text-black text-white"
-        style={{ fontSize: '1.5rem' }}
+        className="dark:text-black text-white text-[1.2rem] md:text-[1.5rem]"
       />
     </button>
   );
