@@ -1,12 +1,12 @@
 export const metadata = {
   About: {
     Bio: [
-      ' Currently in my 4th Year pursuing BTech Computer Science from IIIT Kottayam.',
-      'Dabble in Web Development, Web Designing, Graphic Designing.',
-      'Building effecient and scalable applications, while constantly learning new skills.'
+      'I am a Software Developer specializing in Frontend Web Development, Web Designing.',
+      'Building effecient and scalable applications, while constantly looking for oppurtinities to grow.',
+      'Currently a 4th Year student pursuing BTech Computer Science from IIIT Kottayam.'
     ],
     Skills: {
-      Languages: 'JavaScript, TypeScript, Python, C++ , HTML, CSS, SCSS',
+      Languages: 'JavaScript, TypeScript, HTML, CSS, SCSS',
       Frameworks: 'React, React-Native, NodeJS, ExpressJS, Pandas',
       Tools: ' GIT, Google Cloud, Firebase, Expo-CLI, Vercel'
     }

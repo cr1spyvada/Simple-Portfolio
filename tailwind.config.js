@@ -21,6 +21,21 @@ module.exports = {
         loblolly: '#bfcbce',
         nepal: '#84a7ba',
         wildblueyonder: '#6f90af'
+      },
+      animation: {
+        bounceX: 'bounce 1s infinite'
+      },
+      keyframes: {
+        bounce: {
+          '0%, 100%': {
+            transform: 'translateX(50%)',
+            'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)'
+          },
+          '50%': {
+            transform: 'translateX(0)',
+            'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)'
+          }
+        }
       }
     }
   },
