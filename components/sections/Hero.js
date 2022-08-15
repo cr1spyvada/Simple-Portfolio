@@ -18,9 +18,9 @@ export const Hero = () => {
     });
   }, []);
   return (
-    <PageContainer>
+    <PageContainer height="h-screen">
       <div className="h-full w-full text-right flex justify-center items-start">
-        <div className="w-3/5 font-light">
+        <div className="w-4/5 md:w-full font-light">
           <div className="text-lg font-normal mb-2">Hi, my name is</div>
           <div className="text-xl font-thin text-right flex flex-col items-end">
             <div className="font-bold md:text-6xl text-4xl mb-4">Vaisakh Nalu Purakkal.</div>
