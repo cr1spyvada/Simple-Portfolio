@@ -18,13 +18,13 @@ export const metadata = {
       Org: 'Aero Telcom Pvt Ltd',
       Role: 'Application Developer Intern',
       Duration: ["October' 21", "January' 22"]
-    },
-    {
-      // Org: 'Indian Institute of Information Technology Kottayam',
-      Org: 'IIIT Kottayam',
-      Role: 'Graduation',
-      Duration: ["August' 19", "April' 23"]
     }
+    // {
+    //   // Org: 'Indian Institute of Information Technology Kottayam',
+    //   Org: 'IIIT Kottayam',
+    //   Role: 'Graduation',
+    //   Duration: ["August' 19", "April' 23"]
+    // }
     // {
     //   Org: 'Delhi Public School, R.K Puram',
     //   Role: 'High School',
