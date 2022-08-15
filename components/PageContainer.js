@@ -13,7 +13,7 @@ export const PageContainer = ({ height, children, title, color = 'white' }) => {
           {title?.toUpperCase()}
         </div>
       )}
-      <div className="mb-auto mda:my-auto h-5/6 w-full">{children}</div>
+      <div className="mb-auto md:my-auto h-5/6 w-full">{children}</div>
     </div>
   );
 };
