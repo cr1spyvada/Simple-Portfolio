@@ -30,5 +30,31 @@ export const metadata = {
     //   Role: 'High School',
     //   Duration: ["May' 07", "April' 19"]
     // }
+  ],
+  Projects: [
+    {
+      source: './img1.jpg',
+      title: 'Weather App',
+      code: 'https://github.com/cr1spyvada/simpleweather-app',
+      live: 'https://cr1spyvada.github.io/simpleweather-app/'
+    },
+    {
+      source: './img1.jpg',
+      title: 'Weather App',
+      code: 'https://github.com/cr1spyvada/simpleweather-app',
+      live: 'https://cr1spyvada.github.io/simpleweather-app/'
+    },
+    {
+      source: './img1.jpg',
+      title: 'Weather App',
+      code: 'https://github.com/cr1spyvada/simpleweather-app',
+      live: 'https://cr1spyvada.github.io/simpleweather-app/'
+    },
+    {
+      source: './img1.jpg',
+      title: 'Weather App',
+      code: 'https://github.com/cr1spyvada/simpleweather-app',
+      live: 'https://cr1spyvada.github.io/simpleweather-app/'
+    }
   ]
 };

@@ -25,7 +25,9 @@ export const About = () => {
                 <a className="font-semibold">{key}:</a>
                 <a className="flex flex-col">
                   {value.split(', ').map((val, index) => (
-                    <div key={index}>{val}</div>
+                    <div className="dark:text-gray-300 text-gray-700" key={index}>
+                      {val}
+                    </div>
                   ))}
                 </a>
               </li>
