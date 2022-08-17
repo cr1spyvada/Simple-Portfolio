@@ -8,14 +8,18 @@ import { Footer } from '../components/Footer';
 import Experience from '../components/sections/Experience';
 import ToggleButton from '../components/buttons/ToggleButton';
 import { useEffect, useState } from 'react';
-import { faArrowUp, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown, faArrowUp, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Home() {
   const [visible, setVisible] = useState(false);
+  const [topVisible, setTopVisible] = useState(true);
   const [darkTheme, setDarkTheme] = useState(false);
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 200) setTopVisible(false);
+    else setTopVisible(true);
     if (scrolled > 800) {
       setVisible(true);
     } else if (scrolled <= 800) {
@@ -56,11 +60,19 @@ export default function Home() {
         <About />
         <Experience />
         <Projects />
-        <div className="fixed items-end flex flex-col gap-y-2 bottom-5 right-0 p-2 md:mr-3">
+        <div className="fixed z-[2] items-end flex flex-col gap-y-2 bottom-5 right-0 p-2 md:mr-3">
           {visible && <ToggleButton onClick={scrollToTop} icon={faArrowUp} />}
           <ToggleButton onClick={changeState} icon={!darkTheme ? faMoon : faSun} />
         </div>
       </div>
+      {topVisible && (
+        <div className="dark:text-white absolute z-[1] flex flex-col justify-center items-center mb-2 w-full bottom-0">
+          <div className="animate-bounceY text-5xl mx-auto">
+            <FontAwesomeIcon icon={faAngleDown} />
+          </div>
+          <div>Scroll Down</div>
+        </div>
+      )}
       <Footer />
     </div>
   );

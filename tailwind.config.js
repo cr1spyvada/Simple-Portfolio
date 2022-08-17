@@ -23,16 +23,27 @@ module.exports = {
         wildblueyonder: '#6f90af'
       },
       animation: {
-        bounceX: 'bounce 1s infinite'
+        bounceX: 'bounceH 1s infinite',
+        bounceY: 'bounceV 2s infinite'
       },
       keyframes: {
-        bounce: {
+        bounceH: {
           '0%, 100%': {
             transform: 'translateX(50%)',
             'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)'
           },
           '50%': {
             transform: 'translateX(0)',
+            'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)'
+          }
+        },
+        bounceV: {
+          '0%, 100%': {
+            transform: 'translateY(-50%)',
+            'animation-timing-function': 'cubic-bezier(1, 1, 0, 0)'
+          },
+          '50%': {
+            transform: 'translateY(0)',
             'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)'
           }
         }
