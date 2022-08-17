@@ -55,7 +55,7 @@ export default function Home() {
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
       <NavBar />
-      <div className="relative mt-10">
+      <div className="relative mt-10 scroll-smooth">
         <Hero />
         <About />
         <Experience />
