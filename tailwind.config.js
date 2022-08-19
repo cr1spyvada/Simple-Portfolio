@@ -4,7 +4,7 @@ module.exports = {
   content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     screens: {
-      xs: '480px',
+      xs: '420px',
       sm: '640px',
       md: '768px',
       lg: '1024px',
@@ -17,10 +17,10 @@ module.exports = {
         26: '104px'
       },
       colors: {
-        martinique: '#303655',
-        loblolly: '#bfcbce',
-        nepal: '#84a7ba',
-        wildblueyonder: '#6f90af'
+        w4: '#1C0118',
+        w3: '#5C80BC',
+        w2: '#C57B57',
+        w1: '#F0F9F6'
       },
       animation: {
         bounceX: 'bounceH 1s infinite',

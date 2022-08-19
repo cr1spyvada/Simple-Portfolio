@@ -20,14 +20,16 @@ export const Hero = () => {
   return (
     <PageContainer height="h-screen">
       <div className="h-full w-full text-right flex justify-center items-start">
-        <div className="w-4/5 md:w-full font-light">
+        <div className="rounded-lg dark:bg-transparent px-5 w-4/5 md:w-full font-light">
           <div className="text-lg font-normal mb-2">Hi, my name is</div>
           <div className="text-xl font-thin text-right flex flex-col items-end">
             <div className="font-bold md:text-6xl text-4xl mb-4">Vaisakh Nalu Purakkal.</div>
             <div className="hero-target-container w-fit font-semibold mx-2">
               <div className="text-2xl hero-target">
                 <div className="hero-card-a w-fit">Software Developer</div>
-                <div className="hero-card-b w-fit ml-auto">Problem Solver</div>
+                <div className="hero-card-b w-fit whitespace-pre-wrap xs:whitespace-nowrap">
+                  {'Problem\nSolver'}
+                </div>
               </div>
             </div>
             <div>designing & building responsive applications every moment.</div>

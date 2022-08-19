@@ -9,7 +9,7 @@ export const NavBar = () => {
   const tabArray = ['About', 'Experience', 'Projects', 'Contact'];
   return (
     // TODO: add content to meta
-    <div className="relative rounded-xl flex px-20 z-[10000] dark:bg-slate-900 bg-white justify-between dark:drop-shadow-white drop-shadow-md w-full top-0 left-0 py-5 items-center flex-col md:flex-row">
+    <div className="relative rounded-xl flex px-20 z-[10000] dark:bg-sky-900 bg-white justify-between dark:drop-shadow-white drop-shadow-md w-full top-0 left-0 py-5 items-center flex-col md:flex-row">
       <div className="md:flex w-full items-center justify-between py-4 md:px-10 px-7">
         <div
           className="flex flex-col dark:text-white font-bold text-2xl items-center
@@ -35,7 +35,7 @@ export const NavBar = () => {
           )}
         </div>
         <ul
-          className={`md:flex shadow-md rounded-lg md:shadow-none md:justify-between gap-y-5 text-xl md:items-center md:pb-0 pb-12 absolute md:static dark:text-white dark:bg-slate-900 bg-white md:z-auto left-0 w-full md:w-auto md:pl-0 transition-all duration-500 ease-in ${
+          className={`md:flex shadow-md rounded-lg md:shadow-none md:justify-between gap-y-5 text-xl md:items-center md:pb-0 pb-12 absolute md:static dark:text-white dark:bg-sky-900 bg-white md:z-auto left-0 w-full md:w-auto md:pl-0 transition-all duration-500 ease-in ${
             open ? 'top-[10rem] ' : 'top-[-30rem]'
           }`}>
           {tabArray.map((value, idx) => (

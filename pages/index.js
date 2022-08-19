@@ -50,7 +50,7 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-white text-xs sm:text-sm md:text-md lg:text-lg transition-colors duration-500 dark:bg-slate-900">
+    <div className="bg-gradient-to-b from-white to-sky-200 text-xs sm:text-sm md:text-md lg:text-lg transition-colors duration-500 dark:from-sky-900 dark:to-slate-900">
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
