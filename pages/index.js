@@ -50,7 +50,8 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-gradient-to-b text-w6 dark:text-w1 from-w1 to-w4 text-xs sm:text-sm md:text-md lg:text-lg transition-colors duration-500 dark:from-w6 dark:to-w6">
+    // <div className="bg-gradient-to-b text-w6 dark:text-w1 from-w1 to-w4 text-xs sm:text-sm md:text-md lg:text-lg transition-colors duration-500 dark:from-w6 dark:to-w6">
+    <div className="bg-gradient-to-b text-w6 dark:text-w1 bg-w1 text-xs sm:text-sm md:text-md lg:text-lg transition-colors duration-500 dark:from-w6">
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
