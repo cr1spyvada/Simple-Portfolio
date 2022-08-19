@@ -17,8 +17,11 @@ module.exports = {
         26: '104px'
       },
       colors: {
-        w4: '#1C0118',
-        w3: '#5C80BC',
+        w6: '#08080D',
+        // w5:'#1C0118',//lighter shade of w5
+        w5: '#140111',
+        w4: '#5C80BC',
+        w3: '#A6BDD9',
         w2: '#C57B57',
         w1: '#F0F9F6'
       },

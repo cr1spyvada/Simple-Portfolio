@@ -50,7 +50,7 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-gradient-to-b from-white to-sky-200 text-xs sm:text-sm md:text-md lg:text-lg transition-colors duration-500 dark:from-sky-900 dark:to-slate-900">
+    <div className="bg-gradient-to-b text-w6 dark:text-w1 from-w1 to-w4 text-xs sm:text-sm md:text-md lg:text-lg transition-colors duration-500 dark:from-w6 dark:to-w6">
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
@@ -66,7 +66,7 @@ export default function Home() {
         </div>
       </div>
       {topVisible && (
-        <div className="dark:text-white absolute z-[1] flex flex-col justify-center items-center mb-2 w-full bottom-0">
+        <div className="dark:text-w1 absolute z-[1] flex flex-col justify-center items-center mb-2 w-full bottom-0">
           <div className="animate-bounceY text-5xl mx-auto">
             <FontAwesomeIcon icon={faAngleDown} />
           </div>
