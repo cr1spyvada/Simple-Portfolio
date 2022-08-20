@@ -18,7 +18,9 @@
     "next": "12.2.0",
     "next-themes": "^0.2.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-tsparticles": "^2.2.2",
+    "tsparticles": "^2.2.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",

@@ -10,6 +10,7 @@ import ToggleButton from '../components/buttons/ToggleButton';
 import { useEffect, useState } from 'react';
 import { faAngleDown, faArrowUp, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Animation from '../components/Animation';
 
 export default function Home() {
   const [visible, setVisible] = useState(false);
@@ -55,7 +56,8 @@ export default function Home() {
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
       <NavBar />
-      <div className="relative mt-10 scroll-smooth">
+      <Animation className="absolute h-full w-full z-[-1]" />
+      <div className="relative space-y-14 mt-10 scroll-smooth">
         <Hero />
         <About />
         <Experience />
