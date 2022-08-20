@@ -42,7 +42,7 @@ export const NavBar = () => {
               className="items-center w-max mx-auto my-5 text-center transition group delay-250 duration-300 md:mx-4 rounded-md p-1">
               <a href={'#' + value}>
                 {value}
-                <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-w4"></span>
+                <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-w4 dark:bg-w2"></span>
               </a>
             </li>
           ))}

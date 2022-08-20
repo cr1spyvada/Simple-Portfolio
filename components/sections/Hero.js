@@ -23,7 +23,7 @@ export const Hero = () => {
         <div className="rounded-lg dark:bg-transparent px-5 w-4/5 md:w-full font-light">
           <div className="text-lg font-normal mb-2">Hi, my name is</div>
           <div className="text-xl font-thin text-right flex flex-col items-end">
-            <div className="font-bold md:text-6xl dark:text-w2 text-4xl mb-4">
+            <div className="font-bold md:text-6xl text-w6 dark:text-w2 text-4xl mb-4">
               Vaisakh Nalu Purakkal.
             </div>
             <div className="hero-target-container w-fit font-semibold mx-2">
