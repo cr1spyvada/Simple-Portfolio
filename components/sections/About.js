@@ -25,7 +25,7 @@ export const About = () => {
                 <a className="font-semibold">{key}:</a>
                 <a className="flex flex-col">
                   {value.split(', ').map((val, index) => (
-                    <div className="dark:text-gray-300 text-gray-700" key={index}>
+                    <div className="dark:text-gray-300 text-w6" key={index}>
                       {val}
                     </div>
                   ))}
@@ -36,7 +36,7 @@ export const About = () => {
         </div>
         <a
           href="https://drive.google.com/file/d/1iNqIRmDYrXFQOkBLiotiCpdhEuKW7lUY/view?usp=sharing"
-          className="mt-4 text-xl ml-auto font-semibold w-fit flex items-center flex-nowrap rounded-lg dark:hover:text-white dark:hover:border-white px-2 border-0 text-sky-900 dark:text-blue-300 hover:text-sky-500">
+          className="mt-4 text-xl ml-auto font-semibold w-fit flex items-center flex-nowrap rounded-lg dark:hover:text-white dark:hover:border-white px-2 border-0 text-w4 dark:text-w2 hover:text-w5">
           View my Resume
           <div className="text-2xl animate-bounceX mx-1">
             <FontAwesomeIcon icon={faArrowRight} style={{ fontSize: '1.2rem' }} />
