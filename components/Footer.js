@@ -8,7 +8,7 @@ import Tailwind from '../public/tailwind.svg';
 export const Footer = () => {
   const IconClassName = 'w-full fill-black h-8 mx-4 my-2 rounded-lg dark:fill-white';
   return (
-    <div className="py-5 px-20 flex flex-wrap gap-1 justify-between items-center text-sm md:text-xl dark:text-w1 text-w6">
+    <div className="px-20 flex flex-wrap gap-1 justify-between items-center text-sm md:text-xl dark:text-w1 text-w6">
       <div className="flex justify-around w-full md:w-fit">
         {/* TODO: add to meta doc */}
         <a href="mailto:vaisakh2019@iiitkottayam.ac.in">
