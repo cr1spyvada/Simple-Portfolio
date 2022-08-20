@@ -32,14 +32,16 @@ const Animation = () => {
         },
         particles: {
           number: {
-            value: 80,
+            value: 75,
             density: {
               enable: true,
-              area: 800
+              area: 1000
             }
           },
           color: {
-            value: ['#2EB67D', '#ECB22E', '#E01E5B', '#36C5F0', '#000000']
+            // value: ['#2EB67D', '#ECB22E', '#E01E5B', '#36C5F0', '#000000']
+            //red,yellow,green,blue
+            value: ['#f3763a', '#F3DB1F', '#42FF8C', '#36C5F0']
           },
           shape: {
             type: 'circle'
@@ -47,15 +49,15 @@ const Animation = () => {
           opacity: {
             value: 1
           },
-          size: {
-            value: { min: 1, max: 8 }
-          },
           links: {
             enable: true,
-            distance: 150,
-            color: '#808080',
-            opacity: 0.4,
+            distance: 175,
+            color: '#7e7e7e',
+            opacity: 0.5,
             width: 1
+          },
+          size: {
+            value: { min: 1, max: 15 }
           },
           move: {
             enable: true,
@@ -74,18 +76,19 @@ const Animation = () => {
             },
             onClick: {
               enable: true,
-              mode: 'push'
+              mode: 'repulse'
             }
           },
           modes: {
+            repulse: {
+              distance: 300,
+              duration: 2
+            },
             grab: {
-              distance: 140,
+              distance: 150,
               links: {
                 opacity: 1
               }
-            },
-            push: {
-              quantity: 4
             }
           }
         }
