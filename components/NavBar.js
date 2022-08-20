@@ -9,7 +9,7 @@ export const NavBar = () => {
   const tabArray = ['About', 'Experience', 'Projects', 'Contact'];
   return (
     // TODO: add content to meta
-    <div className="relative backdrop-blur-3xl shadow-lg z-[10000] rounded-xl flex px-20 dark:bg-w6 bg-w1 justify-between dark:drop-shadow-white drop-shadow-md w-full top-0 left-0 py-5 items-center flex-col md:flex-row">
+    <div className="relative z-[10000] rounded-3xl flex px-20 dark:bg-w6 bg-w1 justify-between dark:drop-shadow-white drop-shadow w-full top-0 left-0 py-5 items-center flex-col md:flex-row">
       <div className="md:flex w-full items-center justify-between py-41 md:px-10 px-7">
         <div className="flex flex-col dark:text-w1 font-bold text-2xl items-center text-w6">
           <div className="text-2xl flex-nowrap font-medium">@vaisakhnp</div>
