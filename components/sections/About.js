@@ -4,9 +4,9 @@ import React from 'react';
 import { metadata } from '../../data/content';
 import { PageContainer } from '../PageContainer';
 
-export const About = () => {
+export const About = ({ textEnter, textLeave }) => {
   return (
-    <PageContainer title="About">
+    <PageContainer textEnter={textEnter} textLeave={textLeave} title="About">
       <div className="w-full relative text-left h-full flex flex-col justify-around font-light text-lg">
         <div className="flex flex-col text-right md:text-right items-end">
           <ul className="md:w-3/4">
@@ -22,19 +22,21 @@ export const About = () => {
           <ul className="ml-auto text-right gap-x-12 md:w-3/4 flex flex-wrap justify-end w-full">
             {Object.entries(metadata.About.Skills).map(([key, value], idx) => (
               <li className="list-none rounded-lg my-2 flex flex-col" key={idx}>
-                <a className="font-semibold">{key}:</a>
-                <a className="flex flex-col">
+                <span className="font-semibold">{key}:</span>
+                <span className="flex flex-col">
                   {value.split(', ').map((val, index) => (
                     <div className="dark:text-gray-300 text-w6" key={index}>
                       {val}
                     </div>
                   ))}
-                </a>
+                </span>
               </li>
             ))}
           </ul>
         </div>
         <a
+          onMouseEnter={() => textEnter(2)}
+          onMouseLeave={textLeave}
           href="https://drive.google.com/file/d/1iNqIRmDYrXFQOkBLiotiCpdhEuKW7lUY/view?usp=sharing"
           className="mt-4 text-xl ml-auto font-semibold w-fit flex items-center flex-nowrap rounded-lg dark:hover:text-white dark:hover:border-white px-2 border-0 text-w4 dark:text-w2 hover:text-w5">
           View my Resume

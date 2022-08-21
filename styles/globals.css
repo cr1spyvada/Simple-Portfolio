@@ -19,6 +19,7 @@
 
 *,
 html {
+  cursor: none;
   scroll-behavior: smooth !important;
 }
 

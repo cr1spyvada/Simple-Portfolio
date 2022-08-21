@@ -1,7 +1,7 @@
 import '../styles/globals.css';
 import '@fortawesome/fontawesome-svg-core/styles.css'; // import Font Awesome CSS
 import { config } from '@fortawesome/fontawesome-svg-core';
-import SplashScreen from '../components/SplashScreen';
+import SplashScreen from '../components/sections/SplashScreen';
 import React from 'react';
 config.autoAddCss = false;
 
