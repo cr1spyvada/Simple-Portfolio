@@ -5,19 +5,28 @@ import Mail from '../public/mail.svg';
 import NextJS from '../public/nextjs.svg';
 import Tailwind from '../public/tailwind.svg';
 
-export const Footer = () => {
+export const Footer = ({ textEnter, textLeave }) => {
   const IconClassName = 'w-full fill-black h-8 mx-4 my-2 rounded-lg dark:fill-white';
   return (
     <div className="px-20 flex flex-wrap gap-1 justify-between items-center text-sm md:text-xl dark:text-w1 text-w6">
       <div className="flex justify-around w-full md:w-fit">
         {/* TODO: add to meta doc */}
-        <a href="mailto:vaisakh2019@iiitkottayam.ac.in">
+        <a
+          onMouseOver={() => textEnter(2)}
+          onMouseLeave={textLeave}
+          href="mailto:vaisakh2019@iiitkottayam.ac.in">
           <Mail className={IconClassName} />
         </a>
-        <a href="https://www.linkedin.com/in/vaisakhnp/">
+        <a
+          onMouseOver={() => textEnter(2)}
+          onMouseLeave={textLeave}
+          href="https://www.linkedin.com/in/vaisakhnp/">
           <Linkedin className={IconClassName} />
         </a>
-        <a href="https://github.com/cr1spyvada">
+        <a
+          onMouseOver={() => textEnter(2)}
+          onMouseLeave={textLeave}
+          href="https://github.com/cr1spyvada">
           <Github className={IconClassName} />
         </a>
       </div>

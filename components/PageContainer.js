@@ -1,6 +1,13 @@
 import React from 'react';
 
-export const PageContainer = ({ height, children, title, color = 'white' }) => {
+export const PageContainer = ({
+  textEnter,
+  textLeave,
+  height,
+  children,
+  title,
+  color = 'white'
+}) => {
   return (
     <div
       id={title}
@@ -9,7 +16,10 @@ export const PageContainer = ({ height, children, title, color = 'white' }) => {
         title ? 'py-20' : 'py-0'
       } ${color}`}>
       {title && (
-        <div className="h-min md:text-right text-right w-full md:mx-auto dark:text-w2 md:text-6xl text-3xl">
+        <div
+          onMouseEnter={() => textEnter(1)}
+          onMouseLeave={textLeave}
+          className="h-min md:text-right text-right w-full md:mx-auto dark:text-w2 md:text-6xl text-3xl">
           {title?.toUpperCase()}
         </div>
       )}

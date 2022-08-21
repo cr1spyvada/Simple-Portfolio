@@ -2,9 +2,9 @@ import React from 'react';
 import { metadata } from '../../data/content';
 import { PageContainer } from '../PageContainer';
 
-const Experience = () => {
+const Experience = ({ textEnter, textLeave }) => {
   return (
-    <PageContainer title="Experience">
+    <PageContainer textEnter={textEnter} textLeave={textLeave} title="Experience">
       <div className="h-full relative my-4 container mx-auto px-6 flex flex-col justify-between gap-y-4">
         {/* vertical timeline line */}
         <div className="absolute z-0 w-2 rounded-xl h-full bg-w6 dark:bg-w1 shadow-md inset-0 left-17 md:mx-auto md:right-0 md:left-0"></div>
