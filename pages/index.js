@@ -62,7 +62,8 @@ export default function Home() {
     default: {
       x: mousePosition.x - 16,
       y: mousePosition.y - 16,
-      backgroundColor: darkTheme ? '#C57B57' : '#5C80BC'
+      backgroundColor: darkTheme ? '#C57B57' : '#5C80BC',
+      mixBlendMode: 'difference'
     },
     text: {
       height: 150,
