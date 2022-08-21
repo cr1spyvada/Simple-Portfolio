@@ -22,14 +22,14 @@ export const About = () => {
           <ul className="ml-auto text-right gap-x-12 md:w-3/4 flex flex-wrap justify-end w-full">
             {Object.entries(metadata.About.Skills).map(([key, value], idx) => (
               <li className="list-none rounded-lg my-2 flex flex-col" key={idx}>
-                <a className="font-semibold">{key}:</a>
-                <a className="flex flex-col">
+                <span className="font-semibold">{key}:</span>
+                <span className="flex flex-col">
                   {value.split(', ').map((val, index) => (
                     <div className="dark:text-gray-300 text-w6" key={index}>
                       {val}
                     </div>
                   ))}
-                </a>
+                </span>
               </li>
             ))}
           </ul>

@@ -15,9 +15,9 @@ export const NavBar = () => {
           <div className="text-2xl flex-nowrap font-medium">@vaisakhnp</div>
           <div className="text-xl text-center font-light mx-auto">Full-Stack Developer</div>
         </div>
-        <div
+        <button
           onClick={() => setOpen(!open)}
-          className="text-3xl dark:text-w1 absolute right-8 top-6 cursor-pointer md:hidden">
+          className="text-3xl dark:text-w1 absolute right-8 top-6 md:hidden">
           {open ? (
             <FontAwesomeIcon
               icon={faX}
@@ -31,7 +31,7 @@ export const NavBar = () => {
               style={{ fontSize: '1.5rem' }}
             />
           )}
-        </div>
+        </button>
         <ul
           className={`md:flex shadow-md rounded-lg md:shadow-none md:justify-between gap-y-5 text-xl md:items-center md:pb-0 pb-12 absolute md:static dark:text-w1 dark:bg-w6 bg-w1 md:z-auto left-0 w-full md:w-auto md:pl-0 transition-all duration-500 ease-in ${
             open ? 'top-[5rem]' : 'top-[-30rem]'
