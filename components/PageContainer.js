@@ -5,7 +5,7 @@ export const PageContainer = ({ height, children, title, color = 'white' }) => {
     <div
       id={title}
       className={`
-      ${height} md:w-[75vw] mx-auto md:h-screen flex flex-col justify-center px-10 md:px-20 dark:text-w1 ${
+      ${height} md:w-[75vw] md:backdrop-blur-3xl md:shadow-lg rounded-xl mx-auto md:h-screen flex flex-col justify-center px-10 md:px-20 dark:text-w1 ${
         title ? 'py-20' : 'py-0'
       } ${color}`}>
       {title && (
@@ -13,7 +13,9 @@ export const PageContainer = ({ height, children, title, color = 'white' }) => {
           {title?.toUpperCase()}
         </div>
       )}
-      <div className="mb-auto md:my-auto h-5/6 w-full">{children}</div>
+      <div className="mb-auto p-3 md:p-0 backdrop-blur-3xl rounded-xl shadow-lg md:shadow-none md:backdrop-blur-none md:my-auto h-5/6 w-full">
+        {children}
+      </div>
     </div>
   );
 };

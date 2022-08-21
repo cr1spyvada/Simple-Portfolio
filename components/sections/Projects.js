@@ -7,20 +7,20 @@ import { PageContainer } from '../PageContainer';
 export const Projects = () => {
   return (
     <PageContainer title="Projects">
-      <div className="w-full h-full md:w-5/7 grid p-4 gap-4 md:grid-rows-3 md:grid-cols-3">
-        <div className="md:row-span-1 group relative md:col-span-2 rounded-lg overflow-hidden">
+      <div className="w-full h-full md:w-5/7 grid p-4 gap-4 md:grid-rows-3 md:grid-cols-2 lg:grid-cols-3">
+        <div className="lg:row-span-1 group relative lg:col-span-2 rounded-lg overflow-hidden">
           <Thumbnail idx={0} />
         </div>
-        <div className="md:row-span-2 group relative md:col-span-1 rounded-lg overflow-hidden">
+        <div className="lg:row-span-2 group relative lg:col-span-1 rounded-lg overflow-hidden">
           <Thumbnail idx={1} />
         </div>
-        <div className="md:row-span-2 group relative md:col-span-1 rounded-lg overflow-hidden">
+        <div className="lg:row-span-2 group relative lg:col-span-1 rounded-lg overflow-hidden">
           <Thumbnail idx={2} />
         </div>
-        <div className="md:row-span-1 group relative md:col-span-1 rounded-lg overflow-hidden">
+        <div className="lg:row-span-1 group relative lg:col-span-1 rounded-lg overflow-hidden">
           <Thumbnail idx={3} />
         </div>
-        <div className="md:row-span-1 group relative md:col-span-2 rounded-lg overflow-hidden">
+        <div className="lg:row-span-1 group relative lg:col-span-2 rounded-lg overflow-hidden">
           <Thumbnail idx={1} />
         </div>
       </div>
