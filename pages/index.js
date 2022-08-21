@@ -64,7 +64,7 @@ export default function Home() {
         <About />
         <Experience />
         <Projects />
-        <div className="fixed z-[2] items-end flex flex-col gap-y-2 bottom-5 right-0 p-2 md:mr-3">
+        <div className="fixed z-[2] items-end flex flex-col gap-y-2 bottom-5 right-0 p-1 md:mr-3">
           {visible && <ToggleButton onClick={scrollToTop} icon={faArrowUp} />}
           <ToggleButton onClick={changeState} icon={!darkTheme ? faMoon : faSun} />
         </div>
