@@ -11,11 +11,17 @@ import { useEffect, useState } from 'react';
 import { faAngleDown, faArrowUp, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Animation from '../components/Animation';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   const [visible, setVisible] = useState(false);
   const [topVisible, setTopVisible] = useState(true);
   const [darkTheme, setDarkTheme] = useState(false);
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y: 0
+  });
+  const [cursorVariant, setCursorVariant] = useState('default');
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
@@ -38,7 +44,53 @@ export default function Home() {
   useEffect(() => {
     // typeof window !== 'undefined' &&
     window.addEventListener('scroll', toggleVisible);
-  });
+    const mouseMove = (e) => {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY
+      });
+    };
+
+    window.addEventListener('mousemove', mouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', mouseMove);
+    };
+  }, []);
+
+  const variants = {
+    default: {
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16,
+      backgroundColor: darkTheme ? '#C57B57' : '#F0F9F6',
+      mixBlendMode: 'difference'
+    },
+    text: {
+      height: 150,
+      width: 150,
+      x: mousePosition.x - 75,
+      y: mousePosition.y - 75,
+      backgroundColor: darkTheme ? '#C57B57' : '#F0F9F6',
+      mixBlendMode: 'difference'
+    },
+    clickable: {
+      height: 50,
+      width: 50,
+      x: mousePosition.x - 25,
+      y: mousePosition.y - 25,
+      backgroundColor: darkTheme ? '#C57B57' : '#F0F9F6',
+      mixBlendMode: 'difference'
+    }
+  };
+  const textEnter = (id = 1) => {
+    console.log('enter');
+    const cursorVariantOptions = ['default', 'text', 'clickable'];
+    setCursorVariant(cursorVariantOptions[id]);
+  };
+  const textLeave = () => {
+    console.log('leave');
+    setCursorVariant('default');
+  };
 
   function changeState() {
     if (darkTheme === false) {
@@ -49,7 +101,6 @@ export default function Home() {
       setDarkTheme(false);
     }
   }
-
   return (
     //TODO: clear commented code
     // <div className="bg-gradient-to-b text-w6 dark:text-w1 from-w1 to-w4 text-xs sm:text-sm md:text-md lg:text-lg transition-colors duration-500 dark:from-w6 dark:to-w6">
@@ -57,13 +108,13 @@ export default function Home() {
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
-      <NavBar />
+      <NavBar textEnter={textEnter} textLeave={textLeave} />
       <Animation className="absolute h-full w-full z-[-1]" />
       <div className="relative space-y-14 mt-10 scroll-smooth">
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
+        <Hero textEnter={textEnter} textLeave={textLeave} />
+        <About textEnter={textEnter} textLeave={textLeave} />
+        <Experience textEnter={textEnter} textLeave={textLeave} />
+        <Projects textEnter={textEnter} textLeave={textLeave} />
         <div className="fixed z-[2] items-end flex flex-col gap-y-2 bottom-5 right-0 p-1 md:mr-3">
           {visible && <ToggleButton onClick={scrollToTop} icon={faArrowUp} />}
           <ToggleButton onClick={changeState} icon={!darkTheme ? faMoon : faSun} />
@@ -77,7 +128,11 @@ export default function Home() {
           <div>Scroll Down</div>
         </div>
       )}
-      <Footer />
+      <Footer textEnter={textEnter} textLeave={textLeave} />
+      <motion.div
+        className="fixed invisible md:visible h-8 w-8 bg-w4 dark:bg-w2 z-[110] top-0 left-0 pointer-events-none rounded-full"
+        variants={variants}
+        animate={cursorVariant}></motion.div>
     </div>
   );
 }
