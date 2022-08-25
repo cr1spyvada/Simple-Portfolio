@@ -7,7 +7,7 @@ import { PageContainer } from '../PageContainer';
 export const Projects = ({ textEnter, textLeave }) => {
   return (
     <PageContainer textEnter={textEnter} textLeave={textLeave} title="Projects">
-      <div className="w-full h-full md:w-5/7 grid p-4 gap-4 md:grid-rows-3 md:grid-cols-2 lg:grid-cols-3">
+      <div className="w-full h-full md:w-5/7 grid p-4 gap-4 md:grid-rows-2 md:grid-cols-2 lg:grid-cols-3">
         <div className="lg:row-span-1 group relative lg:col-span-2 rounded-lg overflow-hidden">
           <Thumbnail textEnter={textEnter} textLeave={textLeave} idx={0} />
         </div>

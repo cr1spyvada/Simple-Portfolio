@@ -103,7 +103,7 @@ export default function Home() {
   return (
     //TODO: clear commented code
     // <div className="bg-gradient-to-b text-w6 dark:text-w1 from-w1 to-w4 text-xs sm:text-sm md:text-md lg:text-lg transition-colors duration-500 dark:from-w6 dark:to-w6">
-    <div className="bg-gradient-to-b text-w6 dark:text-w1 bg-w1 text-xs sm:text-sm md:text-md lg:text-lg transition-colors duration-500 dark:bg-w6">
+    <div className="select-none bg-gradient-to-b text-w6 dark:text-w1 bg-w1 text-xs sm:text-sm md:text-md lg:text-lg transition-colors duration-500 dark:bg-w6">
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
@@ -128,7 +128,7 @@ export default function Home() {
       )}
       <Footer textEnter={textEnter} textLeave={textLeave} />
       <motion.div
-        transition={{ type: 'spring', stiffness: 250, mass: 0.1 }}
+        transition={{ duration: 2, type: 'spring', stiffness: 300, mass: 0.1 }}
         className="fixed invisible md:visible h-8 w-8 bg-w6 dark:bg-w1 z-[110] top-0 left-0 pointer-events-none rounded-full"
         variants={variants}
         animate={cursorVariant}></motion.div>

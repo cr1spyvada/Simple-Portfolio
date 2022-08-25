@@ -24,17 +24,17 @@ const Animation = () => {
   return (
     <Particles
       id="tsparticles"
-      className="absolute z-[-1] h-full w-full"
       init={particlesInit}
       loaded={particlesLoaded}
+      // className="absolute z-[-1] h-full w-full"
       options={{
-        fullScreen: { enable: false },
+        // fullScreen: { enable: false },
         background: {
           color: '#0000003'
         },
         particles: {
           number: {
-            value: 75,
+            value: 50,
             density: {
               enable: true,
               area: 1000
@@ -63,7 +63,7 @@ const Animation = () => {
           },
           move: {
             enable: true,
-            speed: 5,
+            speed: window.innerWidth >= 600 ? 5 : 2,
             direction: 'none',
             random: false,
             straight: false,
