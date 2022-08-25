@@ -11,15 +11,15 @@ export const Projects = ({ textEnter, textLeave }) => {
         <div className="lg:row-span-1 group relative lg:col-span-2 rounded-lg overflow-hidden">
           <Thumbnail textEnter={textEnter} textLeave={textLeave} idx={0} />
         </div>
-        <div className="lg:row-span-2 group relative lg:col-span-1 rounded-lg overflow-hidden">
+        <div className="lg:row-span-1 group relative lg:col-span-1 rounded-lg overflow-hidden">
           <Thumbnail textEnter={textEnter} textLeave={textLeave} idx={1} />
         </div>
-        <div className="lg:row-span-2 group relative lg:col-span-1 rounded-lg overflow-hidden">
+        <div className="lg:row-span-1 group relative lg:col-span-1 rounded-lg overflow-hidden">
           <Thumbnail textEnter={textEnter} textLeave={textLeave} idx={2} />
         </div>
-        <div className="lg:row-span-1 group relative lg:col-span-1 rounded-lg overflow-hidden">
+        {/* <div className="lg:row-span-1 group relative lg:col-span-1 rounded-lg overflow-hidden">
           <Thumbnail textEnter={textEnter} textLeave={textLeave} idx={3} />
-        </div>
+        </div> */}
         <div className="lg:row-span-1 group relative lg:col-span-2 rounded-lg overflow-hidden">
           <Thumbnail textEnter={textEnter} textLeave={textLeave} idx={1} />
         </div>

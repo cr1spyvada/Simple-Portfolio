@@ -10,7 +10,6 @@ import ToggleButton from '../components/buttons/ToggleButton';
 import { useEffect, useState } from 'react';
 import { faAngleDown, faArrowUp, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Animation from '../components/Animation';
 import { motion } from 'framer-motion';
 
 export default function Home() {
@@ -62,15 +61,15 @@ export default function Home() {
     default: {
       x: mousePosition.x - 16,
       y: mousePosition.y - 16,
-      backgroundColor: darkTheme ? '#C57B57' : '#F0F9F6',
+      backgroundColor: darkTheme ? '#F0F9F6' : '#F0F9F6',
       mixBlendMode: 'difference'
     },
     text: {
-      height: 150,
-      width: 150,
-      x: mousePosition.x - 75,
-      y: mousePosition.y - 75,
-      backgroundColor: darkTheme ? '#C57B57' : '#F0F9F6',
+      height: 180,
+      width: 180,
+      x: mousePosition.x - 90,
+      y: mousePosition.y - 90,
+      backgroundColor: darkTheme ? '#F0F9F6' : '#F0F9F6',
       mixBlendMode: 'difference'
     },
     clickable: {
@@ -78,7 +77,7 @@ export default function Home() {
       width: 50,
       x: mousePosition.x - 25,
       y: mousePosition.y - 25,
-      backgroundColor: darkTheme ? '#C57B57' : '#F0F9F6',
+      backgroundColor: darkTheme ? '#F0F9F6' : '#F0F9F6',
       mixBlendMode: 'difference'
     }
   };
@@ -109,8 +108,7 @@ export default function Home() {
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
       <NavBar textEnter={textEnter} textLeave={textLeave} />
-      <Animation className="absolute h-full w-full z-[-1]" />
-      <div className="relative space-y-14 mt-10 scroll-smooth">
+      <div className="relative space-y-14 scroll-smooth">
         <Hero textEnter={textEnter} textLeave={textLeave} />
         <About textEnter={textEnter} textLeave={textLeave} />
         <Experience textEnter={textEnter} textLeave={textLeave} />
@@ -130,7 +128,8 @@ export default function Home() {
       )}
       <Footer textEnter={textEnter} textLeave={textLeave} />
       <motion.div
-        className="fixed invisible md:visible h-8 w-8 bg-w4 dark:bg-w2 z-[110] top-0 left-0 pointer-events-none rounded-full"
+        transition={{ type: 'spring', stiffness: 250, mass: 0.1 }}
+        className="fixed invisible md:visible h-8 w-8 bg-w6 dark:bg-w1 z-[110] top-0 left-0 pointer-events-none rounded-full"
         variants={variants}
         animate={cursorVariant}></motion.div>
     </div>

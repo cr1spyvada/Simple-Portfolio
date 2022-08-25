@@ -24,9 +24,11 @@ const Animation = () => {
   return (
     <Particles
       id="tsparticles"
+      className="absolute z-[-1] h-full w-full"
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
+        fullScreen: { enable: false },
         background: {
           color: '#0000003'
         },

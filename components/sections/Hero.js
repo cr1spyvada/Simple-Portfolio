@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import anime from 'animejs';
 import React, { useEffect, useRef } from 'react';
 import { PageContainer } from '../PageContainer';
+import Animation from '../Animation';
 
 export const Hero = ({ textEnter, textLeave }) => {
   let animation = useRef(null);
@@ -18,19 +19,23 @@ export const Hero = ({ textEnter, textLeave }) => {
     });
   }, []);
   return (
-    <PageContainer height="h-[75vh] md:h-[75vh]">
-      <div className="h-full w-full text-right flex justify-center items-center">
+    <div className="relative z-[0] h-screen w-full">
+      <Animation />
+      <div className="h-[75vh] z-[1] md:h-[75vh] mx-auto md:w-[75vw] text-right flex justify-center items-center">
         <div className="rounded-lg dark:bg-transparent px-5 w-4/5 md:w-full font-light">
-          <div className="text-lg font-normal mb-2">Hi, my name is</div>
-          <div className="text-xl font-thin text-right flex flex-col items-end">
-            <div className="font-bold md:text-6xl text-w6 dark:text-w2 text-4xl mb-4">
-              Vaisakh Nalu Purakkal.
+          <div className="text-xl font-normal mb-2">Hi, I'm</div>
+          <div className="text-2xl font-thin text-right flex flex-col items-end">
+            <div
+              onMouseEnter={() => textEnter(1)}
+              onMouseLeave={textLeave}
+              className="font-bold md:text-9xl text-w6 dark:text-w1 text-7xl mb-4">
+              Vaisakh
             </div>
             <div className="hero-target-container w-fit font-semibold mx-2">
               <div className="md:text-4xl text-2xl hero-target">
                 <div className="hero-card-a w-fit">Software Developer</div>
                 <div className="hero-card-b w-fit whitespace-pre-wrap xs:whitespace-nowrap">
-                  {'Problem\nSolver'}
+                  {'Problem Solver'}
                 </div>
               </div>
             </div>
@@ -47,6 +52,6 @@ export const Hero = ({ textEnter, textLeave }) => {
           </div>
         </div>
       </div>
-    </PageContainer>
+    </div>
   );
 };
