@@ -33,28 +33,28 @@ export const metadata = {
   ],
   Projects: [
     {
-      source: './img1.jpg',
+      source: './blog.png',
+      title: 'Blog Site',
+      code: 'https://github.com/cr1spyvada/QuicBlog',
+      live: 'https://quicblog.herokuapp.com'
+    },
+    {
+      source: './img2.jpg',
       title: 'Weather App',
       code: 'https://github.com/cr1spyvada/simpleweather-app',
       live: 'https://cr1spyvada.github.io/simpleweather-app/'
     },
     {
-      source: './img1.jpg',
-      title: 'Weather App',
-      code: 'https://github.com/cr1spyvada/simpleweather-app',
-      live: 'https://cr1spyvada.github.io/simpleweather-app/'
+      source: './VA.jpg',
+      title: 'Virtual Assistant',
+      code: 'https://github.com/cr1spyvada/Virtual-Assistant'
+      // live: 'https://cr1spyvada.github.io/simpleweather-app/'
     },
     {
-      source: './img1.jpg',
-      title: 'Weather App',
-      code: 'https://github.com/cr1spyvada/simpleweather-app',
-      live: 'https://cr1spyvada.github.io/simpleweather-app/'
-    },
-    {
-      source: './img1.jpg',
-      title: 'Weather App',
-      code: 'https://github.com/cr1spyvada/simpleweather-app',
-      live: 'https://cr1spyvada.github.io/simpleweather-app/'
+      source: './unihub.png',
+      title: 'Uni-Hub',
+      code: 'https://github.com/cr1spyvada/Uni-Hub'
+      // live: 'https://cr1spyvada.github.io/simpleweather-app/'
     }
   ]
 };

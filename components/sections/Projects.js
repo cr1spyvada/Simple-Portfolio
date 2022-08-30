@@ -21,7 +21,7 @@ export const Projects = ({ textEnter, textLeave }) => {
           <Thumbnail textEnter={textEnter} textLeave={textLeave} idx={3} />
         </div> */}
         <div className="lg:row-span-1 group relative lg:col-span-2 rounded-lg overflow-hidden">
-          <Thumbnail textEnter={textEnter} textLeave={textLeave} idx={1} />
+          <Thumbnail textEnter={textEnter} textLeave={textLeave} idx={3} />
         </div>
       </div>
     </PageContainer>
@@ -48,14 +48,16 @@ const Thumbnail = ({ idx, textEnter, textLeave }) => {
             {/* Source Code */}
             <FontAwesomeIcon icon={faCode} style={{ fontSize: '1rem' }} />
           </a>
-          <a
-            onMouseOver={() => textEnter(2)}
-            onMouseLeave={textLeave}
-            href={live}
-            className="font-semibold rounded-full bg-w2 p-2 w-6 md:w-10 h-6 md:h-10 flex justify-center items-center text-gray-100">
-            {/* Live Demo */}
-            <FontAwesomeIcon icon={faExternalLink} style={{ fontSize: '1rem' }} />
-          </a>
+          {live && (
+            <a
+              onMouseOver={() => textEnter(2)}
+              onMouseLeave={textLeave}
+              href={live}
+              className="font-semibold rounded-full bg-w2 p-2 w-6 md:w-10 h-6 md:h-10 flex justify-center items-center text-gray-100">
+              {/* Live Demo */}
+              <FontAwesomeIcon icon={faExternalLink} style={{ fontSize: '1rem' }} />
+            </a>
+          )}
         </div>
       </div>
     </>
