@@ -37,24 +37,24 @@ const Thumbnail = ({ idx, textEnter, textLeave }) => {
         src={source}
         className="h-full w-full group-hover:blur-sm group-hover:scale-110 transform transition duration-500 ease-out"
       />
-      <div className="absolute flex flex-col justify-center items-center text-w1 opacity-0 bottom-0 left-0 h-full w-full bg-w6 group-hover:opacity-50 transform transition duration-500 ease-in">
-        <div className="font-bold text-2xl py-2">{title}</div>
+      <div className="absolute flex flex-col md:flex-row justify-between p-3 items-center text-w1 opacity-a0 bottom-0 left-0 h-full w-1/2 md:h-1/3 md:w-full bg-w6 ">
+        <div className="font-bold text-md md:text-xl py-2">{title}</div>
         <div className="flex justify-evenly gap-x-10">
           <a
             onMouseOver={() => textEnter(2)}
             onMouseLeave={textLeave}
             href={code}
-            className="font-semibold rounded-full bg-w2 p-2 w-10 h-10 flex justify-center items-center text-gray-100">
+            className="font-semibold rounded-full bg-w2 p-2 w-6 md:w-10 h-6 md:h-10 flex justify-center items-center text-gray-100">
             {/* Source Code */}
-            <FontAwesomeIcon icon={faCode} style={{ fontSize: '1.2rem' }} />
+            <FontAwesomeIcon icon={faCode} style={{ fontSize: '1rem' }} />
           </a>
           <a
             onMouseOver={() => textEnter(2)}
             onMouseLeave={textLeave}
             href={live}
-            className="font-semibold rounded-full bg-w2 p-2 w-10 h-10 flex justify-center items-center text-gray-100">
+            className="font-semibold rounded-full bg-w2 p-2 w-6 md:w-10 h-6 md:h-10 flex justify-center items-center text-gray-100">
             {/* Live Demo */}
-            <FontAwesomeIcon icon={faExternalLink} style={{ fontSize: '1.2rem' }} />
+            <FontAwesomeIcon icon={faExternalLink} style={{ fontSize: '1rem' }} />
           </a>
         </div>
       </div>
