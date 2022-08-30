@@ -34,7 +34,7 @@ const Animation = () => {
         },
         particles: {
           number: {
-            value: 50,
+            value: 30,
             density: {
               enable: true,
               area: 1000
