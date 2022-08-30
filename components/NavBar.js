@@ -30,7 +30,7 @@ export const NavBar = ({ textEnter, textLeave }) => {
         </div>
       </div>
       <div
-        className={`h-[100vh] w-[100vw] fixed backdrop-blur-xl z-[105] flex flex-col justify-start items-center text-xl md:text-6xl transition-all ease-in-out duration-500 
+        className={`h-[100vh] w-[100vw] fixed backdrop-blur-xl z-[105] flex flex-col justify-start items-center text-3xl md:text-6xl transition-all ease-in-out duration-500 
           ${open ? 'translate-x-open' : 'translate-x-full'}
           `}>
         <div className="list-none my-auto flex flex-col gap-y-5">
