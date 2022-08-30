@@ -10,7 +10,6 @@ import ToggleButton from '../components/buttons/ToggleButton';
 import { useEffect, useState } from 'react';
 import { faAngleDown, faArrowUp, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Animation from '../components/Animation';
 import { motion } from 'framer-motion';
 
 export default function Home() {
@@ -60,17 +59,17 @@ export default function Home() {
 
   const variants = {
     default: {
-      x: mousePosition.x - 16,
-      y: mousePosition.y - 16,
-      backgroundColor: darkTheme ? '#C57B57' : '#F0F9F6',
+      x: mousePosition.x - 8,
+      y: mousePosition.y - 8,
+      backgroundColor: darkTheme ? '#F0F9F6' : '#F0F9F6',
       mixBlendMode: 'difference'
     },
     text: {
-      height: 150,
-      width: 150,
-      x: mousePosition.x - 75,
-      y: mousePosition.y - 75,
-      backgroundColor: darkTheme ? '#C57B57' : '#F0F9F6',
+      height: 180,
+      width: 180,
+      x: mousePosition.x - 90,
+      y: mousePosition.y - 90,
+      backgroundColor: darkTheme ? '#F0F9F6' : '#F0F9F6',
       mixBlendMode: 'difference'
     },
     clickable: {
@@ -78,8 +77,17 @@ export default function Home() {
       width: 50,
       x: mousePosition.x - 25,
       y: mousePosition.y - 25,
-      backgroundColor: darkTheme ? '#C57B57' : '#F0F9F6',
+      backgroundColor: darkTheme ? '#F0F9F6' : '#F0F9F6',
       mixBlendMode: 'difference'
+    }
+  };
+  const variantsOuter = {
+    default: {
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16,
+      backgroundColor: 'transparent',
+      border: '1px solid #08080D',
+      borderColor: darkTheme ? '#F0F9F6' : '#08080D'
     }
   };
   const textEnter = (id = 1) => {
@@ -104,18 +112,17 @@ export default function Home() {
   return (
     //TODO: clear commented code
     // <div className="bg-gradient-to-b text-w6 dark:text-w1 from-w1 to-w4 text-xs sm:text-sm md:text-md lg:text-lg transition-colors duration-500 dark:from-w6 dark:to-w6">
-    <div className="bg-gradient-to-b text-w6 dark:text-w1 bg-w1 text-xs sm:text-sm md:text-md lg:text-lg transition-colors duration-500 dark:bg-w6">
+    <div className="select-none bg-gradient-to-b text-w6 dark:text-w1 bg-w1 text-xs sm:text-sm md:text-md lg:text-lg transition-colors duration-500 dark:bg-w6">
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
       <NavBar textEnter={textEnter} textLeave={textLeave} />
-      <Animation className="absolute h-full w-full z-[-1]" />
-      <div className="relative space-y-14 mt-10 scroll-smooth">
+      <div className="relative space-y-14 scroll-smooth">
         <Hero textEnter={textEnter} textLeave={textLeave} />
         <About textEnter={textEnter} textLeave={textLeave} />
         <Experience textEnter={textEnter} textLeave={textLeave} />
         <Projects textEnter={textEnter} textLeave={textLeave} />
-        <div className="fixed z-[2] items-end flex flex-col gap-y-2 bottom-5 right-0 p-1 md:mr-3">
+        <div className="fixed z-[110] items-end flex flex-col gap-y-2 bottom-5 right-0 p-1 md:mr-3">
           {visible && <ToggleButton onClick={scrollToTop} icon={faArrowUp} />}
           <ToggleButton onClick={changeState} icon={!darkTheme ? faMoon : faSun} />
         </div>
@@ -130,9 +137,15 @@ export default function Home() {
       )}
       <Footer textEnter={textEnter} textLeave={textLeave} />
       <motion.div
-        className="fixed invisible md:visible h-8 w-8 bg-w4 dark:bg-w2 z-[110] top-0 left-0 pointer-events-none rounded-full"
+        transition={{ duration: 2, type: 'spring', stiffness: 900, mass: 0.15 }}
+        className="invisible sm:visible fixed h-4 w-4 bg-w6 dark:bg-w1 z-[110] top-0 left-0 pointer-events-none rounded-full"
         variants={variants}
         animate={cursorVariant}></motion.div>
+      <motion.div
+        transition={{ duration: 2, type: 'spring', stiffness: 100, mass: 0.1 }}
+        className="invisible sm:visible fixed h-8 w-8 bg-w2 dark:bg-w2 z-[110] top-0 left-0 pointer-events-none rounded-full"
+        variants={variantsOuter}
+        animate={'default'}></motion.div>
     </div>
   );
 }
