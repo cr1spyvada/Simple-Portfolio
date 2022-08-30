@@ -107,6 +107,7 @@ export default function Home() {
     <div className="bg-gradient-to-b text-w6 dark:text-w1 bg-w1 text-xs sm:text-sm md:text-md lg:text-lg transition-colors duration-500 dark:bg-w6">
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <title>Vaisakh NP</title>
       </Head>
       <NavBar textEnter={textEnter} textLeave={textLeave} />
       <Animation className="absolute h-full w-full z-[-1]" />
