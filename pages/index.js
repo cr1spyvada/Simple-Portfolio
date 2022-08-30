@@ -86,7 +86,8 @@ export default function Home() {
       x: mousePosition.x - 16,
       y: mousePosition.y - 16,
       backgroundColor: 'transparent',
-      border: '1px solid #F0F9F6'
+      border: '1px solid #08080D',
+      borderColor: darkTheme ? '#F0F9F6' : '#08080D'
     }
   };
   const textEnter = (id = 1) => {
@@ -121,7 +122,7 @@ export default function Home() {
         <About textEnter={textEnter} textLeave={textLeave} />
         <Experience textEnter={textEnter} textLeave={textLeave} />
         <Projects textEnter={textEnter} textLeave={textLeave} />
-        <div className="fixed z-[2] items-end flex flex-col gap-y-2 bottom-5 right-0 p-1 md:mr-3">
+        <div className="fixed z-[110] items-end flex flex-col gap-y-2 bottom-5 right-0 p-1 md:mr-3">
           {visible && <ToggleButton onClick={scrollToTop} icon={faArrowUp} />}
           <ToggleButton onClick={changeState} icon={!darkTheme ? faMoon : faSun} />
         </div>
@@ -137,12 +138,12 @@ export default function Home() {
       <Footer textEnter={textEnter} textLeave={textLeave} />
       <motion.div
         transition={{ duration: 2, type: 'spring', stiffness: 900, mass: 0.15 }}
-        className="fixed h-4 w-4 bg-w6 dark:bg-w1 z-[110] top-0 left-0 pointer-events-none rounded-full"
+        className="invisible sm:visible fixed h-4 w-4 bg-w6 dark:bg-w1 z-[110] top-0 left-0 pointer-events-none rounded-full"
         variants={variants}
         animate={cursorVariant}></motion.div>
       <motion.div
         transition={{ duration: 2, type: 'spring', stiffness: 100, mass: 0.1 }}
-        className="fixed h-8 w-8 bg-w2 dark:bg-w2 z-[110] top-0 left-0 pointer-events-none rounded-full"
+        className="invisible sm:visible fixed h-8 w-8 bg-w2 dark:bg-w2 z-[110] top-0 left-0 pointer-events-none rounded-full"
         variants={variantsOuter}
         animate={'default'}></motion.div>
     </div>

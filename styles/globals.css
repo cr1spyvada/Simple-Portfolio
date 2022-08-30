@@ -17,6 +17,11 @@
   }
 }
 
+:root {
+  --w2: #c57b57;
+  --w6: #08080d;
+  --height: 3px;
+}
 *,
 html {
   cursor: none;
@@ -25,11 +30,10 @@ html {
 
 .hamburger::before {
   width: 2rem;
-  height: 2px;
+  height: var(--height);
   display: inline-flex;
   content: '';
   border-radius: 1em;
-  background-color: white;
   position: absolute;
   left: 0;
   transition: all 0.5s ease-in-out;
@@ -37,11 +41,10 @@ html {
 }
 .hamburger::after {
   width: 2rem;
-  height: 2px;
+  height: var(--height);
   display: inline-flex;
   content: '';
   border-radius: 1em;
-  background-color: white;
   position: absolute;
   left: 0;
   transition: all 0.5s ease-in-out;
@@ -49,19 +52,17 @@ html {
 }
 .hamburger {
   width: 2rem;
-  height: 2px;
+  height: var(--height);
   border-radius: 1em;
-  background-color: white;
   transition: all 0.5s ease-in-out;
 }
 
 .active-hamburger::before {
   width: 2rem;
-  height: 2px;
+  height: var(--height);
   display: inline-flex;
   content: '';
   border-radius: 1em;
-  background-color: white;
   position: absolute;
   top: 0;
   left: 0;
@@ -70,11 +71,10 @@ html {
 }
 .active-hamburger::after {
   width: 2rem;
-  height: 2px;
+  height: var(--height);
   display: inline-flex;
   content: '';
   border-radius: 1em;
-  background-color: white;
   position: absolute;
   top: 0;
   left: 0;
@@ -83,7 +83,7 @@ html {
 }
 .active-hamburger {
   width: 2rem;
-  height: 2px;
+  height: var(--height);
   border-radius: 1em;
   transform: translateX(-3rem);
   background-color: transparent;
