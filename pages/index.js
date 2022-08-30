@@ -59,8 +59,8 @@ export default function Home() {
 
   const variants = {
     default: {
-      x: mousePosition.x - 16,
-      y: mousePosition.y - 16,
+      x: mousePosition.x - 8,
+      y: mousePosition.y - 8,
       backgroundColor: darkTheme ? '#F0F9F6' : '#F0F9F6',
       mixBlendMode: 'difference'
     },
@@ -79,6 +79,14 @@ export default function Home() {
       y: mousePosition.y - 25,
       backgroundColor: darkTheme ? '#F0F9F6' : '#F0F9F6',
       mixBlendMode: 'difference'
+    }
+  };
+  const variantsOuter = {
+    default: {
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16,
+      backgroundColor: 'transparent',
+      border: '1px solid #F0F9F6'
     }
   };
   const textEnter = (id = 1) => {
@@ -128,10 +136,15 @@ export default function Home() {
       )}
       <Footer textEnter={textEnter} textLeave={textLeave} />
       <motion.div
-        transition={{ duration: 2, type: 'spring', stiffness: 300, mass: 0.1 }}
-        className="fixed invisible md:visible h-8 w-8 bg-w6 dark:bg-w1 z-[110] top-0 left-0 pointer-events-none rounded-full"
+        transition={{ duration: 2, type: 'spring', stiffness: 900, mass: 0.15 }}
+        className="fixed h-4 w-4 bg-w6 dark:bg-w1 z-[110] top-0 left-0 pointer-events-none rounded-full"
         variants={variants}
         animate={cursorVariant}></motion.div>
+      <motion.div
+        transition={{ duration: 2, type: 'spring', stiffness: 100, mass: 0.1 }}
+        className="fixed h-8 w-8 bg-w2 dark:bg-w2 z-[110] top-0 left-0 pointer-events-none rounded-full"
+        variants={variantsOuter}
+        animate={'default'}></motion.div>
     </div>
   );
 }

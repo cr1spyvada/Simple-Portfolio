@@ -19,7 +19,7 @@ export const PageContainer = ({
         <div
           onMouseEnter={() => textEnter(1)}
           onMouseLeave={textLeave}
-          className="h-min md:text-right text-right w-full md:mx-auto dark:text-w2 md:text-6xl text-3xl">
+          className="h-min w-fit  ml-auto md:ml-auto dark:text-w2 md:text-6xl text-3xl">
           {title?.toUpperCase()}
         </div>
       )}
