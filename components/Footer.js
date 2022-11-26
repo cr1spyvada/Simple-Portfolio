@@ -34,7 +34,21 @@ export const Footer = ({ textEnter, textLeave }) => {
         Developed with
         <NextJS className="fill-w6 w-8 m-2 rounded-lg dark:fill-w1" />
         ,
-        <Tailwind className="fill-w6 w-10 m-2 rounded-lg dark:fill-w1" />& ❤️ By Vaisakh
+        <Tailwind className="fill-w6 w-10 m-2 rounded-lg dark:fill-w1" />& ❤️
+      </div>
+      <div className="w-full pb-4 flex justify-center items-center">
+        <a
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          }}
+          onMouseOver={() => textEnter(1)}
+          onMouseLeave={textLeave}
+          className="w-fit text-center text-lg md:text-2xl font-bold">
+          ©vaisakh
+        </a>
       </div>
     </div>
   );
