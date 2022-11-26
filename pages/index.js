@@ -73,10 +73,10 @@ export default function Home() {
       mixBlendMode: 'difference'
     },
     clickable: {
-      height: 50,
-      width: 50,
-      x: mousePosition.x - 25,
-      y: mousePosition.y - 25,
+      height: 25,
+      width: 25,
+      x: mousePosition.x - 12.5,
+      y: mousePosition.y - 12.5,
       backgroundColor: darkTheme ? '#F0F9F6' : '#F0F9F6',
       mixBlendMode: 'difference'
     }
