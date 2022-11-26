@@ -37,7 +37,8 @@ export const About = ({ textEnter, textLeave }) => {
         <a
           onMouseEnter={() => textEnter(2)}
           onMouseLeave={textLeave}
-          href="https://drive.google.com/file/d/1iNqIRmDYrXFQOkBLiotiCpdhEuKW7lUY/view?usp=sharing"
+          href="./Resume.pdf"
+          target="_blank"
           className="mt-4 text-xl ml-auto font-semibold w-fit flex items-center flex-nowrap rounded-lg dark:hover:text-white dark:hover:border-white px-2 border-0 text-w4 dark:text-w2 hover:text-w5">
           View my Resume
           <div className="text-2xl animate-bounceX mx-1">
