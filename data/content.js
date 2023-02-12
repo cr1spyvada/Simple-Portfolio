@@ -36,7 +36,7 @@ export const metadata = {
       source: './blog.png',
       title: 'Blog Site',
       code: 'https://github.com/cr1spyvada/QuicBlog',
-      live: 'https://quicblog.herokuapp.com'
+      live: 'https://quic-blog.vercel.app'
     },
     {
       source: './img2.jpg',
