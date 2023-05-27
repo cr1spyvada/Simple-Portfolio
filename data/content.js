@@ -7,11 +7,13 @@ export const metadata = {
     ],
     Skills: {
       Languages: 'JavaScript, TypeScript, HTML, CSS, SCSS',
-      Frameworks: 'React, React-Native, NodeJS, ExpressJS, Pandas',
+      Frameworks: 'React, React-Native, NodeJS, ThreeJS, MapGLJS',
       Tools: ' GIT, Google Cloud, Firebase, Expo-CLI, Vercel'
     }
   },
   Experience: [
+    { Org: 'Rivi', Role: 'Frontend Developer Intern', Duration: ["Jan' 23", 'Present'] },
+    { Org: 'Technoculture', Role: 'React Native Intern', Duration: ["Nov' 22", "Feb' 23"] },
     { Org: 'Trisetra', Role: 'Frontend Developer Intern', Duration: ["July' 22", "Aug' 22"] },
     { Org: 'EvolvFit', Role: 'Software Developer Intern', Duration: ["April' 22", "June' 22"] },
     {
