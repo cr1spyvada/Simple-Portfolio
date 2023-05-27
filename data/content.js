@@ -3,7 +3,7 @@ export const metadata = {
     Bio: [
       'I am a Software Developer specializing in Frontend Web Development, Web Designing.',
       'Building effecient and scalable applications, while constantly looking for oppurtinities to grow.',
-      'Currently a 4th Year student pursuing BTech Computer Science from IIIT Kottayam.'
+      'A recent BTech Computer Science graduate from IIIT Kottayam.'
     ],
     Skills: {
       Languages: 'JavaScript, TypeScript, HTML, CSS, SCSS',
