@@ -14,12 +14,12 @@ export const metadata = {
   Experience: [
     { Org: 'Rivi', Role: 'Frontend Developer Intern', Duration: ["Jan' 23", 'Present'] },
     { Org: 'Technoculture', Role: 'React Native Intern', Duration: ["Nov' 22", "Feb' 23"] },
-    { Org: 'Trisetra', Role: 'Frontend Developer Intern', Duration: ["July' 22", "Aug' 22"] },
-    { Org: 'EvolvFit', Role: 'Software Developer Intern', Duration: ["April' 22", "June' 22"] },
+    { Org: 'Trisetra', Role: 'Frontend Developer Intern', Duration: ["Jul' 22", "Aug' 22"] },
+    { Org: 'EvolvFit', Role: 'Software Developer Intern', Duration: ["Apr' 22", "Jun' 22"] },
     {
       Org: 'Aero Telcom Pvt Ltd',
       Role: 'Application Developer Intern',
-      Duration: ["October' 21", "January' 22"]
+      Duration: ["Oct' 21", "Jan' 22"]
     }
     // {
     //   // Org: 'Indian Institute of Information Technology Kottayam',
