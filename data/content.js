@@ -2,7 +2,7 @@ export const metadata = {
   About: {
     Bio: [
       'I am a Software Developer specializing in Frontend Web Development',
-      'Building effecient and scalable applications, while constantly looking for oppurtinities to grow.',
+      'Building efficient and scalable applications, while constantly seeking opportunities to grow.',
       'A Computer Science graduate with over 1+ year of full-time experience'
     ],
     Skills: {
