@@ -109,6 +109,11 @@ export default function Home() {
       setDarkTheme(false);
     }
   }
+  const sectionProps = {
+    textEnter: textEnter,
+    textLeave: textLeave
+  };
+
   return (
     //TODO: clear commented code
     // <div className="bg-gradient-to-b text-w6 dark:text-w1 from-w1 to-w4 text-xs sm:text-sm md:text-md lg:text-lg transition-colors duration-500 dark:from-w6 dark:to-w6">
@@ -117,12 +122,12 @@ export default function Home() {
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <title>Vaisakh NP</title>
       </Head>
-      <NavBar textEnter={textEnter} textLeave={textLeave} />
+      <NavBar {...sectionProps} />
       <div className="relative space-y-14 scroll-smooth">
-        <Hero textEnter={textEnter} textLeave={textLeave} />
-        <About textEnter={textEnter} textLeave={textLeave} />
-        <Experience textEnter={textEnter} textLeave={textLeave} />
-        <Projects textEnter={textEnter} textLeave={textLeave} />
+        <Hero {...sectionProps} />
+        <About {...sectionProps} />
+        <Experience {...sectionProps} />
+        <Projects {...sectionProps} />
         <div className="fixed z-[110] items-end flex flex-col gap-y-2 bottom-5 right-0 p-1 md:mr-3">
           {visible && <ToggleButton onClick={scrollToTop} icon={faArrowUp} />}
           <ToggleButton onClick={changeState} icon={!darkTheme ? faMoon : faSun} />
@@ -136,9 +141,9 @@ export default function Home() {
           <div>Scroll Down</div>
         </div>
       )}
-      <Footer textEnter={textEnter} textLeave={textLeave} />
+      <Footer {...sectionProps} />
       <motion.div
-        transition={{ duration: 2, type: 'spring', stiffness: 900, mass: 0.15 }}
+        transition={{ duration: 2, type: 'spring', stiffness: 10000, mass: 0.15 }}
         className="invisible sm:visible fixed h-4 w-4 bg-w6 dark:bg-w1 z-[110] top-0 left-0 pointer-events-none rounded-full"
         variants={variants}
         animate={cursorVariant}></motion.div>

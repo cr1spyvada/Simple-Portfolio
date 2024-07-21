@@ -33,12 +33,12 @@ export const NavBar = ({ textEnter, textLeave }) => {
         className={`h-[100vh] w-[100vw] fixed backdrop-blur-xl z-[105] flex flex-col justify-start items-center text-3xl md:text-6xl transition-all ease-in-out duration-500 
           ${open ? 'translate-x-open' : 'translate-x-full'}
           `}>
-        <div className="list-none my-auto flex flex-col gap-y-5">
+        <div className="list-none my-auto flex flex-col gap-y-5 py-4 w-1/2 bg-w1 dark:bg-w6 rounded-lg">
           {tabArray.map((value, idx) => (
             <li
               key={idx}
               onClick={() => setOpen(!open)}
-              className="items-center w-max mx-auto my-5 text-center transition group delay-250 duration-300 md:mx-4 rounded-md p-1">
+              className="items-center w-max mx-auto md:ml-auto md:mr-10 my-5 text-center transition group delay-250 duration-300 rounded-md p-1">
               <a onMouseOver={() => textEnter(2)} onMouseLeave={textLeave} href={'#' + value}>
                 {value}
                 <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-w4 dark:bg-w2"></span>

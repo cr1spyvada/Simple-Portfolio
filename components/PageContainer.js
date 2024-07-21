@@ -12,7 +12,7 @@ export const PageContainer = ({
     <div
       id={title}
       className={`
-      ${height} md:w-[75vw] md:backdrop-blur-xl dark:border-w2 border-0 dark:shadow-w1  md:shadow-sm rounded-xl mx-auto md:min-h-screen flex flex-col justify-center px-10 md:px-20 dark:text-w1 ${
+      ${height} md:w-[75vw] md:backdrop-blur-xl bg-white dark:border-w2 border-0 dark:shadow-w1  md:shadow-sm rounded-xl mx-auto md:min-h-screen flex flex-col justify-center px-10 md:px-20 dark:text-w1 ${
         title ? 'py-20' : 'py-0'
       } ${color}`}>
       {title && (

@@ -25,7 +25,9 @@ const Experience = ({ textEnter, textLeave }) => {
                   {value.Duration[0]} - {value.Duration[1]}
                 </span>
                 <div className="text-lg md:text-xl font-bold pt-1">{value.Org}</div>
-                <div className="pt-1">{value.Role}</div>
+                <div className="pt-1 flex flex-col">{value.Role.map((role) => (
+                  <div>{role}</div>
+                ))}</div>
               </div>
             </div>
           </div>

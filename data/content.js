@@ -1,24 +1,25 @@
 export const metadata = {
   About: {
     Bio: [
-      'I am a Software Developer specializing in Frontend Web Development, Web Designing.',
+      'I am a Software Developer specializing in Frontend Web Development',
       'Building effecient and scalable applications, while constantly looking for oppurtinities to grow.',
-      'A recent BTech Computer Science graduate from IIIT Kottayam.'
+      'A Computer Science graduate with over 1+ year of full-time experience'
     ],
     Skills: {
-      Languages: 'JavaScript, TypeScript, HTML, CSS, SCSS',
-      Frameworks: 'React, React-Native, NodeJS, ThreeJS, MapGLJS',
-      Tools: ' GIT, Google Cloud, Firebase, Expo-CLI, Vercel'
+      Frontend: 'NextJS, React Native, ThreeJS, TypeScript, Redux',
+      Backend: 'Node.JS, ExpressJS, Jest, TypeScript, Prisma',
+      Tools: 'gRPC, Algolia, CMS, Expo CLI',
+      Databases: 'MongoDB, PostgreSQL, Redis'
     }
   },
   Experience: [
-    { Org: 'Rivi', Role: 'Frontend Developer Intern', Duration: ["Jan' 23", 'Present'] },
-    { Org: 'Technoculture', Role: 'React Native Intern', Duration: ["Nov' 22", "Feb' 23"] },
-    { Org: 'Trisetra', Role: 'Frontend Developer Intern', Duration: ["Jul' 22", "Aug' 22"] },
-    { Org: 'EvolvFit', Role: 'Software Developer Intern', Duration: ["Apr' 22", "Jun' 22"] },
+    { Org: 'Rivi', Role: ['SDE-1', 'Frontend Developer Intern'], Duration: ["Jan' 23", 'Present'] },
+    { Org: 'Technoculture', Role: ['React Native Intern'], Duration: ["Nov' 22", "Feb' 23"] },
+    { Org: 'Trisetra', Role: ['Frontend Developer Intern'], Duration: ["Jul' 22", "Aug' 22"] },
+    { Org: 'EvolvFit', Role: ['Software Developer Intern'], Duration: ["Apr' 22", "Jun' 22"] },
     {
       Org: 'Aero Telcom Pvt Ltd',
-      Role: 'Application Developer Intern',
+      Role: ['Application Developer Intern'],
       Duration: ["Oct' 21", "Jan' 22"]
     }
     // {

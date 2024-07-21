@@ -18,10 +18,10 @@ export const About = ({ textEnter, textLeave }) => {
           </ul>
         </div>
         <div className="flex flex-col items-end rounded-lg">
-          <div className="w-full text-right text-2xl py-2 pr-2">Some of the tools I've used:</div>
+          <div className="w-full text-right py-2 pr-2">Skills:</div>
           <ul className="ml-auto text-right gap-x-12 md:w-3/4 flex flex-wrap justify-end w-full">
             {Object.entries(metadata.About.Skills).map(([key, value], idx) => (
-              <li className="list-none rounded-lg my-2 flex flex-col" key={idx}>
+              <li className="list-none rounded-lg my-2 flex flex-col xs:w-1/3 md:w-auto" key={idx}>
                 <span className="font-semibold">{key}:</span>
                 <span className="flex flex-col">
                   {value.split(', ').map((val, index) => (

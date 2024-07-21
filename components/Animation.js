@@ -4,7 +4,6 @@ import { useCallback } from 'react';
 
 const Animation = () => {
   const particlesInit = useCallback(async (engine) => {
-    console.log(engine);
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size
@@ -17,16 +16,10 @@ const Animation = () => {
     await loadFull(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
-  }, []);
-
   return (
     <Particles
       id="tsparticles"
       init={particlesInit}
-      loaded={particlesLoaded}
-      // className="absolute z-[-1] h-full w-full"
       options={{
         // fullScreen: { enable: false },
         background: {
@@ -34,7 +27,7 @@ const Animation = () => {
         },
         particles: {
           number: {
-            value: 30,
+            value: 15,
             density: {
               enable: true,
               area: 1000
@@ -63,7 +56,7 @@ const Animation = () => {
           },
           move: {
             enable: true,
-            speed: window.innerWidth >= 600 ? 5 : 2,
+            speed: 2,
             direction: 'none',
             random: false,
             straight: false,
