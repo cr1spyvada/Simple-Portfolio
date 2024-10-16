@@ -102,6 +102,7 @@ html {
 .hero-card-a,
 .hero-card-b {
   backface-visibility: hidden;
+  transform: rotateX(0deg);
 }
 
 .hero-card-b {
