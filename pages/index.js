@@ -1,16 +1,21 @@
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
-import { Hero } from '../components/sections/Hero';
+
 import styles from '../styles/Home.module.css';
-import { About } from '../components/sections/About';
-import { Projects } from '../components/sections/Projects';
+import { motion } from 'framer-motion';
+
 import { NavBar } from '../components/NavBar';
 import { Footer } from '../components/Footer';
-import Experience from '../components/sections/Experience';
-import ToggleButton from '../components/buttons/ToggleButton';
-import { useEffect, useState } from 'react';
+
+import { Hero } from '../components/sections/Hero';
+import { About } from '../components/sections/About';
+import { Projects } from '../components/sections/Projects';
+import { Experience } from '../components/sections/Experience';
+
 import { faAngleDown, faArrowUp, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { motion } from 'framer-motion';
+import ToggleButton from '../components/buttons/ToggleButton';
+import Contact from '../components/sections/Contact';
 
 export default function Home() {
   const [visible, setVisible] = useState(false);
@@ -91,12 +96,10 @@ export default function Home() {
     }
   };
   const textEnter = (id = 1) => {
-    console.log('enter');
     const cursorVariantOptions = ['default', 'text', 'clickable'];
     setCursorVariant(cursorVariantOptions[id]);
   };
   const textLeave = () => {
-    console.log('leave');
     setCursorVariant('default');
   };
 
@@ -128,6 +131,7 @@ export default function Home() {
         <About {...sectionProps} />
         <Experience {...sectionProps} />
         <Projects {...sectionProps} />
+        <Contact {...sectionProps} />
         <div className="fixed z-[110] items-end flex flex-col gap-y-2 bottom-5 right-0 p-1 md:mr-3">
           {visible && <ToggleButton onClick={scrollToTop} icon={faArrowUp} />}
           <ToggleButton onClick={changeState} icon={!darkTheme ? faMoon : faSun} />

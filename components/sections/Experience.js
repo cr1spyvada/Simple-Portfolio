@@ -2,7 +2,7 @@ import React from 'react';
 import { metadata } from '../../data/content';
 import { PageContainer } from '../PageContainer';
 
-const Experience = ({ textEnter, textLeave }) => {
+export const Experience = ({ textEnter, textLeave }) => {
   return (
     <PageContainer textEnter={textEnter} textLeave={textLeave} title="Experience">
       <div className="h-full relative my-4 container mx-auto px-6 flex flex-col justify-between gap-y-4">
@@ -36,5 +36,3 @@ const Experience = ({ textEnter, textLeave }) => {
     </PageContainer>
   );
 };
-
-export default Experience;
