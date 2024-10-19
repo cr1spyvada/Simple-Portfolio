@@ -6,13 +6,14 @@ export const PageContainer = ({
   height,
   children,
   title,
+  id = null,
   color = 'bg-transparent dark:bg-transparent'
 }) => {
   return (
     <div
-      id={title}
+      id={id ?? title}
       className={`
-      ${height} md:w-[75vw] md:backdrop-blur-xl bg-white dark:border-w2 border-0 dark:shadow-w1  md:shadow-sm rounded-xl mx-auto md:min-h-screen flex flex-col justify-center px-10 md:px-20 dark:text-w1 ${
+      snap-start ${height} md:w-[75vw] md:backdrop-blur-xl bg-white dark:border-w2 border-0 dark:shadow-w1  md:shadow-sm rounded-xl mx-auto md:min-h-screen flex flex-col justify-center px-10 md:px-20 dark:text-w1 ${
         title ? 'py-20' : 'py-0'
       } ${color}`}>
       {title && (

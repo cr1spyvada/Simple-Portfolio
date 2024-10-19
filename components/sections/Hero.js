@@ -19,7 +19,7 @@ export const Hero = ({ textEnter, textLeave }) => {
     });
   }, []);
   return (
-    <div className="relative h-screen w-full">
+    <div className="snap-start relative h-screen w-full">
       <Animation />
       <div className="h-[75vh] md:h-[75vh] mx-auto md:w-[75vw] text-right flex justify-center items-center">
         <div className="rounded-lg dark:bg-transparent px-5 w-4/5 md:w-full font-light">
@@ -33,7 +33,9 @@ export const Hero = ({ textEnter, textLeave }) => {
             </div>
             <div className="hero-target-container w-fit font-semibold mx-2">
               <div className="md:text-4xl text-2xl hero-target">
-                <div className="hero-card-a w-fit whitespace-pre-wrap xs:whitespace-nowrap">Software Developer</div>
+                <div className="hero-card-a w-fit whitespace-pre-wrap xs:whitespace-nowrap">
+                  Software Developer
+                </div>
                 <div className="hero-card-b w-fit whitespace-pre-wrap xs:whitespace-nowrap">
                   Problem Solver
                 </div>

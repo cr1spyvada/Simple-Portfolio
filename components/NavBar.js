@@ -33,7 +33,7 @@ export const NavBar = ({ textEnter, textLeave }) => {
         className={`h-[100vh] w-[100vw] fixed backdrop-blur-xl z-[105] flex flex-col justify-start items-center text-3xl md:text-6xl transition-all ease-in-out duration-500 
           ${open ? 'translate-x-open' : 'translate-x-full'}
           `}>
-        <div className="list-none my-auto flex flex-col gap-y-5 py-4 w-1/2 bg-w1 dark:bg-w6 rounded-lg">
+        <div className="list-none my-auto flex flex-col gap-y-5 py-4 w-1/2 bg-w1 dark:bg-w6 shadow-2xl rounded-lg">
           {tabArray.map((value, idx) => (
             <li
               key={idx}

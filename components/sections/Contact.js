@@ -64,11 +64,9 @@ const Contact = ({ textEnter, textLeave }) => {
   };
 
   return (
-    <PageContainer textEnter={textEnter} textLeave={textLeave} title="Contact Me">
-      <div id="Contact" className="mx-auto flex flex-col justify-center items-center">
-        <form
-          onSubmit={sendEmail}
-          className="w-2/3 md:w-1/2 xl:w-1/3 space-y-8 flex flex-col mt-12 xl:mt-36">
+    <PageContainer textEnter={textEnter} textLeave={textLeave} title="Contact Me" id="Contact">
+      <div id="contact-section" className="mx-auto flex flex-col justify-center items-center">
+        <form onSubmit={sendEmail} className="w-2/3 md:w-1/2 xl:w-1/3 space-y-8 flex flex-col">
           <div>
             <input
               type="text"
