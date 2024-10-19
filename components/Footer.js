@@ -47,7 +47,7 @@ export const Footer = ({ textEnter, textLeave }) => {
           onMouseOver={() => textEnter(2)}
           onMouseLeave={textLeave}
           className="w-fit text-center text-lg md:text-2xl font-bold">
-          {/* ©vaisakh */}
+          {/* ©vaisakh     */}
         </a>
       </div>
     </div>
