@@ -24,7 +24,7 @@ export const PageContainer = ({
           {title?.toUpperCase()}
         </div>
       )}
-      <div className="mb-auto p-3 md:p-0 backdrop-blur-3xl shadow-w6 rounded-xl shadow-sm md:shadow-none dark:backdrop-brightness-110 md:backdrop-blur-none md:my-auto h-5/6 w-full">
+      <div className="mb-auto p-3 md:p-0 backdrop-blur-3xl shadow-w6 dark:shadow-w1 rounded-xl shadow-sm md:shadow-none md:backdrop-blur-none md:my-auto h-5/6 w-full">
         {children}
       </div>
     </div>

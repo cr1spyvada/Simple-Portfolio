@@ -93,7 +93,7 @@ const Contact = ({ textEnter, textLeave }) => {
           </div>
           <button
             type="submit"
-            className={`bg-w2 text-w1 mx-auto mt-4 p-2 w-48 flex gap-2 items-center justify-center ${
+            className={`bg-w2 text-w1 mx-auto mt-4 p-2 w-full flex gap-2 items-center justify-center ${
               isSubmitting || formSubmitted ? 'cursor-not-allowed' : ''
             } ${formSubmitted ? 'opacity-60' : isSubmitting ? 'opacity-85 ' : ''}`}
             disabled={isSubmitting || formSubmitted}>
