@@ -17,8 +17,8 @@ import ToggleButton from '../components/buttons/ToggleButton';
 
 import { metadata } from '../data/content';
 
-import { faAngleDown, faArrowUp, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IoMoon, IoSunny } from 'react-icons/io5';
+import { FaArrowUp, FaCircleChevronDown } from 'react-icons/fa6';
 
 export default function Home() {
   const [visible, setVisible] = useState(false);
@@ -136,14 +136,14 @@ export default function Home() {
         <Projects {...sectionProps} />
         <Contact {...sectionProps} />
         <div className="fixed z-[110] items-end flex flex-col gap-y-2 bottom-5 right-0 p-1 md:mr-3">
-          {visible && <ToggleButton onClick={scrollToTop} icon={faArrowUp} />}
-          <ToggleButton onClick={changeState} icon={!darkTheme ? faMoon : faSun} />
+          {visible && <ToggleButton onClick={scrollToTop} Icon={FaArrowUp} />}
+          <ToggleButton onClick={changeState} Icon={!darkTheme ? IoMoon : IoSunny} />
         </div>
       </div>
       {topVisible && (
         <div className="dark:text-w1 absolute text-md z-[1] flex flex-col justify-center items-center mb-2 w-full bottom-0">
-          <div className="animate-bounceY mx-auto">
-            <FontAwesomeIcon icon={faAngleDown} />
+          <div className="animate-bounceY mx-auto text-lg">
+            <FaCircleChevronDown />
           </div>
           <div>Scroll Down</div>
         </div>

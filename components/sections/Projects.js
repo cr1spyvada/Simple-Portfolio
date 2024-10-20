@@ -2,9 +2,7 @@ import React from 'react';
 
 import { metadata } from '../../data/content';
 import { PageContainer } from '../PageContainer';
-
-import { faArrowRight, faCode, faExternalLink } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { GoArrowRight } from 'react-icons/go';
 
 export const Projects = ({ textEnter, textLeave }) => {
   return (
@@ -38,7 +36,7 @@ const CardButton = ({ href, text, textEnter, textLeave }) => {
       className="rounded-full border-[1px] border-slate-500 px-2 flex gap-2 items-center text-"
       href={href}>
       <span>{text}</span>
-      <FontAwesomeIcon icon={faArrowRight} className="text-[0.6rem]" />
+      <GoArrowRight />
     </a>
   );
 };

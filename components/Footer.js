@@ -1,9 +1,8 @@
 import React from 'react';
-import Linkedin from '../public/linkedin.svg';
-import Github from '../public/github.svg';
-import Mail from '../public/mail.svg';
-import NextJS from '../public/nextjs.svg';
-import Tailwind from '../public/tailwind.svg';
+
+import { IoMdMail } from 'react-icons/io';
+import { FaGithub, FaHashnode, FaLinkedin } from 'react-icons/fa6';
+import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri';
 
 export const Footer = ({ textEnter, textLeave }) => {
   const IconClassName = 'w-full fill-black h-8 mx-4 my-2 rounded-lg dark:fill-white';
@@ -15,26 +14,32 @@ export const Footer = ({ textEnter, textLeave }) => {
           onMouseOver={() => textEnter(2)}
           onMouseLeave={textLeave}
           href="mailto:vaisakh2019@iiitkottayam.ac.in">
-          <Mail className={IconClassName} />
+          <IoMdMail className={IconClassName} />
         </a>
         <a
           onMouseOver={() => textEnter(2)}
           onMouseLeave={textLeave}
           href="https://www.linkedin.com/in/vaisakhnp/">
-          <Linkedin className={IconClassName} />
+          <FaLinkedin className={IconClassName} />
         </a>
         <a
           onMouseOver={() => textEnter(2)}
           onMouseLeave={textLeave}
           href="https://github.com/cr1spyvada">
-          <Github className={IconClassName} />
+          <FaGithub className={IconClassName} />
+        </a>
+        <a
+          onMouseOver={() => textEnter(2)}
+          onMouseLeave={textLeave}
+          href="https://vaisakhnp.hashnode.dev/">
+          <FaHashnode className={IconClassName} />
         </a>
       </div>
       <div className="px-2 flex flex-row items-center justify-center w-full md:w-fit">
         Developed with
-        <NextJS className="fill-w6 w-8 m-2 rounded-lg dark:fill-w1" />
+        <RiNextjsFill className="fill-w6 w-8 m-2 rounded-lg dark:fill-w1" />
         ,
-        <Tailwind className="fill-w6 w-10 m-2 rounded-lg dark:fill-w1" />& ❤️
+        <RiTailwindCssFill className="fill-w6 w-10 m-2 rounded-lg dark:fill-w1" />& ❤️
       </div>
       <div className="w-full pb-4 flex justify-center items-center">
         <a

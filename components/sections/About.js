@@ -1,8 +1,7 @@
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { metadata } from '../../data/content';
 import { PageContainer } from '../PageContainer';
+import { GoArrowRight } from 'react-icons/go';
 
 export const About = ({ textEnter, textLeave }) => {
   return (
@@ -42,7 +41,7 @@ export const About = ({ textEnter, textLeave }) => {
           className="mt-4 text-xl ml-auto font-semibold w-fit flex items-center flex-nowrap rounded-lg dark:hover:text-white dark:hover:border-white px-2 border-0 text-w4 dark:text-w2 hover:text-w5">
           View my Resume
           <div className="text-2xl animate-bounceX mx-1">
-            <FontAwesomeIcon icon={faArrowRight} style={{ fontSize: '1.2rem' }} />
+            <GoArrowRight />
           </div>
         </a>
       </div>

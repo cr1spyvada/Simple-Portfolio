@@ -1,9 +1,6 @@
 import '../styles/globals.css';
-import '@fortawesome/fontawesome-svg-core/styles.css'; // import Font Awesome CSS
-import { config } from '@fortawesome/fontawesome-svg-core';
 import SplashScreen from '../components/sections/SplashScreen';
 import React from 'react';
-config.autoAddCss = false;
 
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = React.useState(false);

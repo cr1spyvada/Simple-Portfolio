@@ -3,9 +3,8 @@ import anime from 'animejs';
 
 import Animation from '../Animation';
 
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { metadata } from '../../data/content';
+import { FaArrowRightLong } from 'react-icons/fa6';
 
 export const Hero = ({ textEnter, textLeave }) => {
   let animation = useRef(null);
@@ -50,7 +49,7 @@ export const Hero = ({ textEnter, textLeave }) => {
               className=" bg-w4 dark:bg-w2 p-4 rounded-xl font-semibold hover:dark:text-w1 hover:text-w5 hover:bg-w3 hover:dark:bg-[#D09476] w-fit flex items-center flex-nowrap my-2 text-w1">
               Get in touch
               <div className="text-2xl animate-bounceX mx-1">
-                <FontAwesomeIcon icon={faArrowRight} style={{ fontSize: '1.2rem' }} />
+                <FaArrowRightLong style={{ fontSize: '1.2rem' }} />
               </div>
             </a>
           </div>
