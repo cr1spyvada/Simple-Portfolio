@@ -46,30 +46,35 @@ export const metadata = {
     {
       source: './portfolio.png',
       title: 'Portfolio Template',
+      desc: 'Portfolio Template made using Tailwind,Framer Motion',
       code: 'https://github.com/cr1spyvada/Simple-Portfolio',
       live: 'https://vaisakhnp.vercel.app/'
     },
     {
       source: './blog.png',
       title: 'Blog Site',
+      desc: 'Blog Posting Site linked with CMS',
       code: 'https://github.com/cr1spyvada/QuicBlog',
       live: 'https://quic-blog.vercel.app'
     },
     {
-      source: './VA.jpg',
-      title: 'Virtual Assistant',
-      code: 'https://github.com/cr1spyvada/Virtual-Assistant'
+      source: './unihub.png',
+      title: 'Uni-Hub',
+      desc: 'A real time voice chat application.',
+      code: 'https://github.com/cr1spyvada/Uni-Hub'
       // live: 'https://cr1spyvada.github.io/simpleweather-app/'
     },
     {
-      source: './unihub.png',
-      title: 'Uni-Hub',
-      code: 'https://github.com/cr1spyvada/Uni-Hub'
+      source: './VA.jpg',
+      title: 'Virtual Assistant',
+      desc: 'A Virtual Assistant that helps you with tasks through voice or text input',
+      code: 'https://github.com/cr1spyvada/Virtual-Assistant'
       // live: 'https://cr1spyvada.github.io/simpleweather-app/'
     },
     {
       source: './img2.jpg',
       title: 'Weather App',
+      desc: 'Simple Weather Info',
       code: 'https://github.com/cr1spyvada/simpleweather-app',
       live: 'https://cr1spyvada.github.io/simpleweather-app/'
     }

@@ -47,7 +47,7 @@ export const Hero = ({ textEnter, textLeave }) => {
               onMouseEnter={() => textEnter(2)}
               onMouseLeave={textLeave}
               href="mailto:vaisakh2019@iiitkottayam.ac.in"
-              className=" bg-w4 dark:bg-w2 p-4 rounded-xl font-semibold hover:dark:text-w1 hover:text-w5 hover:bg-w3 hover:dark:bg-[#D09476] w-fit flex items-center flex-nowrap my-2 text-w6 dark:text-w1">
+              className=" bg-w4 dark:bg-w2 p-4 rounded-xl font-semibold hover:dark:text-w1 hover:text-w5 hover:bg-w3 hover:dark:bg-[#D09476] w-fit flex items-center flex-nowrap my-2 text-w1">
               Get in touch
               <div className="text-2xl animate-bounceX mx-1">
                 <FontAwesomeIcon icon={faArrowRight} style={{ fontSize: '1.2rem' }} />

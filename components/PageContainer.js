@@ -13,7 +13,7 @@ export const PageContainer = ({
     <div
       id={id ?? title}
       className={`
-      snap-start ${height} md:w-[75vw] md:backdrop-blur-xl dark:border-w2 border-0 dark:shadow-w1  md:shadow-sm rounded-xl mx-auto md:min-h-screen flex flex-col justify-center px-10 md:px-20 dark:text-w1 ${
+      snap-start ${height} md:w-[75vw] md:backdrop-blur-lg rounded-xl mx-auto md:min-h-screen flex flex-col justify-center px-10 md:px-20 dark:text-w1 ${
         title ? 'py-20' : 'py-0'
       } ${color}`}>
       {title && (
@@ -24,7 +24,7 @@ export const PageContainer = ({
           {title?.toUpperCase()}
         </div>
       )}
-      <div className="mb-auto p-3 md:p-0 backdrop-blur-3xl shadow-w6 dark:shadow-w1 rounded-xl shadow-sm md:shadow-none md:backdrop-blur-none md:my-auto h-5/6 w-full">
+      <div className="mb-auto p-3 md:p-0 backdrop-blur-xl rounded-xl md:backdrop-blur-none md:my-auto h-5/6 w-full">
         {children}
       </div>
     </div>

@@ -116,8 +116,8 @@ export default function Home() {
     }
   }
   const sectionProps = {
-    textEnter: textEnter,
-    textLeave: textLeave
+    textEnter,
+    textLeave
   };
 
   return (
