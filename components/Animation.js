@@ -27,10 +27,10 @@ const Animation = () => {
         },
         particles: {
           number: {
-            value: 15,
+            value: 20,
             density: {
               enable: true,
-              area: 1000
+              area: 700
             }
           },
           color: {

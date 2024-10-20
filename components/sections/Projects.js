@@ -46,7 +46,7 @@ const ProjectCard = ({ idx, textEnter, textLeave }) => {
   const cursorProps = { textEnter, textLeave };
 
   return (
-    <div className="rounded-lg bg-w3 dark:bg-w1 h-64 flex flex-col justify-between max-w-md mx-auto">
+    <div className="rounded-lg bg-w3 dark:bg-w1 h-64 flex flex-col justify-between max-w-md lg:max-w-none mx-auto">
       <div className="p-2 flex flex-col gap-2 ">
         <div className="font-semibold text-lg text-slate-800">{title}</div>
         <div className="font-light text-sm text-slate-600">{desc}</div>
