@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-
-const Section_List = ['Home', 'About', 'Experience', 'Projects', 'Contact'];
+import { metadata } from '../data/content';
 
 const useCurrentSection = () => {
   const [currentSection, setCurrentSection] = useState('');
@@ -69,12 +68,10 @@ const NavBarDesktop = ({ textEnter, textLeave }) => {
   }, []);
 
   return (
-    <div className="hidden md:flex pr-4 fixed z-[110] top-1/3 right-0">
-      <ul className="group flex flex-col gap-4 list-none text-xl lg:text-2xl w-[12ch]">
-        {Section_List.map((sectionName, idx) => (
-          <li
-            key={idx}
-            className="flex justify-end items-center gap-1 hover:text-w4 hover:dark:text-w2">
+    <div className="hidden md:flex pr-4 fixed z-[110] top-[40%] right-0">
+      <ul className="group flex flex-col gap-0 list-none text-lg w-[9ch]">
+        {metadata.Contents.map((sectionName, idx) => (
+          <li key={idx} className="flex justify-end items-center hover:text-w4 hover:dark:text-w2">
             <a
               className={`transition-all ease-in-out ${
                 listVisibility ? 'w-full' : 'w-0'
@@ -112,7 +109,7 @@ export const NavBar = ({ textEnter, textLeave }) => {
           open ? 'translate-x-open' : 'translate-x-full'
         }`}>
         <div className="list-none my-auto flex flex-col gap-y-5 py-4 w-1/2 bg-w6 text-w1 dark:bg-w1 dark:text-w6 shadow-2xl rounded-lg">
-          {Section_List.map((value, idx) => (
+          {metadata.Contents.map((value, idx) => (
             <li
               key={idx}
               onClick={() => setOpen(!open)}

@@ -2,6 +2,7 @@ export const metadata = {
   Head: {
     title: 'Vaisakh NP'
   },
+  Contents: ['Home', 'About', 'Career', 'Projects', 'Contact'],
   Home: {
     Name: 'Vaisakh',
     Bio: ['Software Developer', 'Problem Solver']
