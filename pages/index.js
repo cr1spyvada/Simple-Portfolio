@@ -13,9 +13,12 @@ import { Projects } from '../components/sections/Projects';
 import { Experience } from '../components/sections/Experience';
 import { Contact } from '../components/sections/Contact';
 
+import ToggleButton from '../components/buttons/ToggleButton';
+
+import { metadata } from '../data/content';
+
 import { faAngleDown, faArrowUp, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ToggleButton from '../components/buttons/ToggleButton';
 
 export default function Home() {
   const [visible, setVisible] = useState(false);
@@ -123,7 +126,7 @@ export default function Home() {
     <div className="snap-y snap-mandatory select-none bg-gradient-to-b text-w6 dark:text-w1 bg-w1 text-xs sm:text-sm md:text-md lg:text-lg transition-colors duration-500 dark:bg-w6">
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <title>Vaisakh NP</title>
+        <title>{metadata.Head.title}</title>
       </Head>
       <NavBar {...sectionProps} />
       <div className="relative space-y-14 scroll-smooth">

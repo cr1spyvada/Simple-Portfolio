@@ -1,9 +1,11 @@
+import React, { useEffect, useRef } from 'react';
+import anime from 'animejs';
+
+import Animation from '../Animation';
+
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import anime from 'animejs';
-import React, { useEffect, useRef } from 'react';
-import { PageContainer } from '../PageContainer';
-import Animation from '../Animation';
+import { metadata } from '../../data/content';
 
 export const Hero = ({ textEnter, textLeave }) => {
   let animation = useRef(null);
@@ -29,15 +31,15 @@ export const Hero = ({ textEnter, textLeave }) => {
               onMouseEnter={() => textEnter(1)}
               onMouseLeave={textLeave}
               className="font-bold md:text-9xl text-w6 dark:text-w1 text-7xl mb-4">
-              Vaisakh
+              {metadata.Home.Name}
             </div>
             <div className="hero-target-container w-fit font-semibold mx-2">
               <div className="md:text-4xl text-2xl hero-target">
                 <div className="hero-card-a w-fit whitespace-pre-wrap xs:whitespace-nowrap">
-                  Software Developer
+                  {metadata.Home.Bio[0]}
                 </div>
                 <div className="hero-card-b w-fit whitespace-pre-wrap xs:whitespace-nowrap">
-                  Problem Solver
+                  {metadata.Home.Bio[1]}
                 </div>
               </div>
             </div>

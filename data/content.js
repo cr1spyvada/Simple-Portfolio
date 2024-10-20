@@ -1,4 +1,11 @@
 export const metadata = {
+  Head: {
+    title: 'Vaisakh NP'
+  },
+  Home: {
+    Name: 'Vaisakh',
+    Bio: ['Software Developer', 'Problem Solver']
+  },
   About: {
     Bio: [
       'I am a Software Developer specializing in Frontend Web Development',
@@ -36,16 +43,16 @@ export const metadata = {
   ],
   Projects: [
     {
+      source: './portfolio.png',
+      title: 'Portfolio Template',
+      code: 'https://github.com/cr1spyvada/Simple-Portfolio',
+      live: 'https://vaisakhnp.vercel.app/'
+    },
+    {
       source: './blog.png',
       title: 'Blog Site',
       code: 'https://github.com/cr1spyvada/QuicBlog',
       live: 'https://quic-blog.vercel.app'
-    },
-    {
-      source: './img2.jpg',
-      title: 'Weather App',
-      code: 'https://github.com/cr1spyvada/simpleweather-app',
-      live: 'https://cr1spyvada.github.io/simpleweather-app/'
     },
     {
       source: './VA.jpg',
@@ -58,6 +65,12 @@ export const metadata = {
       title: 'Uni-Hub',
       code: 'https://github.com/cr1spyvada/Uni-Hub'
       // live: 'https://cr1spyvada.github.io/simpleweather-app/'
+    },
+    {
+      source: './img2.jpg',
+      title: 'Weather App',
+      code: 'https://github.com/cr1spyvada/simpleweather-app',
+      live: 'https://cr1spyvada.github.io/simpleweather-app/'
     }
   ]
 };
