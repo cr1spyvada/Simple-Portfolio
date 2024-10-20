@@ -19,9 +19,9 @@ export const Hero = ({ textEnter, textLeave }) => {
     });
   }, []);
   return (
-    <div className="snap-start relative h-screen w-full">
+    <div id="Home" className="snap-start relative h-screen w-full">
       <Animation />
-      <div className="h-[75vh] md:h-[75vh] mx-auto md:w-[75vw] text-right flex justify-center items-center">
+      <div className="h-[75vh] md:px-16 md:h-[75vh] mx-auto md:w-[75vw] text-right flex justify-center items-center">
         <div className="rounded-lg dark:bg-transparent px-5 w-4/5 md:w-full font-light">
           <div className="text-xl font-normal mb-2">Hi, I'm</div>
           <div className="text-2xl font-thin text-right flex flex-col items-end">

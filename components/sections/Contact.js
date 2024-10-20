@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { PageContainer } from '../PageContainer';
 
-const Contact = ({ textEnter, textLeave }) => {
+export const Contact = ({ textEnter, textLeave }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [stateMessage, setStateMessage] = useState(null);
@@ -116,5 +116,3 @@ const Contact = ({ textEnter, textLeave }) => {
     </PageContainer>
   );
 };
-
-export default Contact;

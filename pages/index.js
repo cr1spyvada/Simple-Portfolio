@@ -11,11 +11,11 @@ import { Hero } from '../components/sections/Hero';
 import { About } from '../components/sections/About';
 import { Projects } from '../components/sections/Projects';
 import { Experience } from '../components/sections/Experience';
+import { Contact } from '../components/sections/Contact';
 
 import { faAngleDown, faArrowUp, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ToggleButton from '../components/buttons/ToggleButton';
-import Contact from '../components/sections/Contact';
 
 export default function Home() {
   const [visible, setVisible] = useState(false);
